@@ -67,6 +67,7 @@
     <Compile Include="Assets\InventoryUi.cs" />
     <Compile Include="Assets\Scripts\Boundaries.cs" />
     <Compile Include="Assets\Scripts\CharacterController2D.cs" />
+    <Compile Include="Assets\Scripts\PlatformMovement.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/srijan/OneDrive - Åbo Akademi O365/haywire-game/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>

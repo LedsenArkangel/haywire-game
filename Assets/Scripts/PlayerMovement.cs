@@ -56,7 +56,7 @@ public class PlayerMovement : MonoBehaviour
       
         if (source_bat == "bat")
         {
-            Vector2 up = new Vector2(10, 0);
+            Vector2 up = new Vector2(15, 0);
             right_wall.transform.Translate(up * 10 * Time.deltaTime);
             source_bat = "none";
         }
@@ -69,7 +69,7 @@ public class PlayerMovement : MonoBehaviour
         {
             spriteRenderer.flipX = false;
         }
-        if (Input.GetAxis("Vertical") != 0)
+        if (Input.GetAxis("Vertical") >0)
         {
             jump = true;
             animator.SetBool("IsJump", jump);
