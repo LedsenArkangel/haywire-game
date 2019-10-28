@@ -65,28 +65,26 @@
   <ItemGroup>
     <Compile Include="Assets\InventorySlot.cs" />
     <Compile Include="Assets\InventoryUi.cs" />
+    <Compile Include="Assets\Scripts\Boundaries.cs" />
     <Compile Include="Assets\Scripts\CharacterController2D.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+    <Reference Include="Unity.Timeline.Editor">
+      <HintPath>C:/Users/srijan/OneDrive - Åbo Akademi O365/haywire-game/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Cinemachine">
+      <HintPath>C:/Users/srijan/OneDrive - Åbo Akademi O365/haywire-game/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Animation.Runtime">
+      <HintPath>C:/Users/srijan/OneDrive - Åbo Akademi O365/haywire-game/Library/ScriptAssemblies/Unity.2D.Animation.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="com.unity.multiplayer-hlapi.Editor">
+      <HintPath>C:/Users/srijan/OneDrive - Åbo Akademi O365/haywire-game/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.VSCode.Editor">
       <HintPath>C:/Users/srijan/OneDrive - Åbo Akademi O365/haywire-game/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/srijan/OneDrive - Åbo Akademi O365/haywire-game/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>C:/Users/srijan/OneDrive - Åbo Akademi O365/haywire-game/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Rider.Editor">
-      <HintPath>C:/Users/srijan/OneDrive - Åbo Akademi O365/haywire-game/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/srijan/OneDrive - Åbo Akademi O365/haywire-game/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Timeline.Editor">
-      <HintPath>C:/Users/srijan/OneDrive - Åbo Akademi O365/haywire-game/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="com.unity.multiplayer-hlapi.Editor">
-      <HintPath>C:/Users/srijan/OneDrive - Åbo Akademi O365/haywire-game/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>C:/Users/srijan/OneDrive - Åbo Akademi O365/haywire-game/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
@@ -94,38 +92,20 @@
     <Reference Include="Unity.Timeline">
       <HintPath>C:/Users/srijan/OneDrive - Åbo Akademi O365/haywire-game/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.2D.Animation.Triangle.Runtime">
+      <HintPath>C:/Users/srijan/OneDrive - Åbo Akademi O365/haywire-game/Library/ScriptAssemblies/Unity.2D.Animation.Triangle.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.CollabProxy.Editor">
+      <HintPath>C:/Users/srijan/OneDrive - Åbo Akademi O365/haywire-game/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="com.unity.multiplayer-weaver.Editor">
       <HintPath>C:/Users/srijan/OneDrive - Åbo Akademi O365/haywire-game/Library/ScriptAssemblies/com.unity.multiplayer-weaver.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.XR.LegacyInputHelpers">
       <HintPath>C:/Users/srijan/OneDrive - Åbo Akademi O365/haywire-game/Library/ScriptAssemblies/UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.2D.Sprite.Editor">
-      <HintPath>C:/Users/srijan/OneDrive - Åbo Akademi O365/haywire-game/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.Tilemap.Editor">
-      <HintPath>C:/Users/srijan/OneDrive - Åbo Akademi O365/haywire-game/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.SpatialTracking">
-      <HintPath>C:/Users/srijan/OneDrive - Åbo Akademi O365/haywire-game/Library/ScriptAssemblies/UnityEditor.SpatialTracking.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.SpatialTracking">
-      <HintPath>C:/Users/srijan/OneDrive - Åbo Akademi O365/haywire-game/Library/ScriptAssemblies/UnityEngine.SpatialTracking.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.XR.LegacyInputHelpers">
-      <HintPath>C:/Users/srijan/OneDrive - Åbo Akademi O365/haywire-game/Library/ScriptAssemblies/UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.UI">
-      <HintPath>C:/Users/srijan/OneDrive - Åbo Akademi O365/haywire-game/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="com.unity.multiplayer-hlapi.Runtime">
-      <HintPath>C:/Users/srijan/OneDrive - Åbo Akademi O365/haywire-game/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.Animation.Runtime">
-      <HintPath>C:/Users/srijan/OneDrive - Åbo Akademi O365/haywire-game/Library/ScriptAssemblies/Unity.2D.Animation.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.Animation.Triangle.Runtime">
-      <HintPath>C:/Users/srijan/OneDrive - Åbo Akademi O365/haywire-game/Library/ScriptAssemblies/Unity.2D.Animation.Triangle.Runtime.dll</HintPath>
+    <Reference Include="Unity.Rider.Editor">
+      <HintPath>C:/Users/srijan/OneDrive - Åbo Akademi O365/haywire-game/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Mathematics">
       <HintPath>C:/Users/srijan/OneDrive - Åbo Akademi O365/haywire-game/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
@@ -133,26 +113,47 @@
     <Reference Include="Unity.InternalAPIEngineBridge.001">
       <HintPath>C:/Users/srijan/OneDrive - Åbo Akademi O365/haywire-game/Library/ScriptAssemblies/Unity.InternalAPIEngineBridge.001.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.2D.Sprite.Editor">
+      <HintPath>C:/Users/srijan/OneDrive - Åbo Akademi O365/haywire-game/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.2D.Common.Runtime">
       <HintPath>C:/Users/srijan/OneDrive - Åbo Akademi O365/haywire-game/Library/ScriptAssemblies/Unity.2D.Common.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Tilemap.Editor">
+      <HintPath>C:/Users/srijan/OneDrive - Åbo Akademi O365/haywire-game/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Animation.Editor">
       <HintPath>C:/Users/srijan/OneDrive - Åbo Akademi O365/haywire-game/Library/ScriptAssemblies/Unity.2D.Animation.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEditor.SpatialTracking">
+      <HintPath>C:/Users/srijan/OneDrive - Åbo Akademi O365/haywire-game/Library/ScriptAssemblies/UnityEditor.SpatialTracking.dll</HintPath>
+    </Reference>
+    <Reference Include="com.unity.cinemachine.editor">
+      <HintPath>C:/Users/srijan/OneDrive - Åbo Akademi O365/haywire-game/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpatialTracking">
+      <HintPath>C:/Users/srijan/OneDrive - Åbo Akademi O365/haywire-game/Library/ScriptAssemblies/UnityEngine.SpatialTracking.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Mathematics.Editor">
       <HintPath>C:/Users/srijan/OneDrive - Åbo Akademi O365/haywire-game/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>C:/Users/srijan/OneDrive - Åbo Akademi O365/haywire-game/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Common.Editor">
       <HintPath>C:/Users/srijan/OneDrive - Åbo Akademi O365/haywire-game/Library/ScriptAssemblies/Unity.2D.Common.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEditor.XR.LegacyInputHelpers">
+      <HintPath>C:/Users/srijan/OneDrive - Åbo Akademi O365/haywire-game/Library/ScriptAssemblies/UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.InternalAPIEditorBridge.001">
       <HintPath>C:/Users/srijan/OneDrive - Åbo Akademi O365/haywire-game/Library/ScriptAssemblies/Unity.InternalAPIEditorBridge.001.dll</HintPath>
     </Reference>
-    <Reference Include="Cinemachine">
-      <HintPath>C:/Users/srijan/OneDrive - Åbo Akademi O365/haywire-game/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+    <Reference Include="UnityEditor.UI">
+      <HintPath>C:/Users/srijan/OneDrive - Åbo Akademi O365/haywire-game/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
-    <Reference Include="com.unity.cinemachine.editor">
-      <HintPath>C:/Users/srijan/OneDrive - Åbo Akademi O365/haywire-game/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
+    <Reference Include="com.unity.multiplayer-hlapi.Runtime">
+      <HintPath>C:/Users/srijan/OneDrive - Åbo Akademi O365/haywire-game/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.10f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

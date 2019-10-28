@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     public CharacterController2D controller;
     public Animator animator;
     public GameObject panel;
+    public GameObject right_wall;
     public float speed;
     public float jumpspeed;
     bool jump = false;
@@ -19,8 +20,12 @@ public class PlayerMovement : MonoBehaviour
     Vector3 movement;
     Rigidbody2D rb;
 
+    public Texture2D bat;
+    public RawImage bat_raw;
     public static List<string> pickies;
     int collision_count;
+
+    string source_bat;
       
     // Start is called before the first frame update
     void Start()
@@ -32,7 +37,8 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-               
+        string bat_name= (PlayerPrefs.GetString("Bat", source_bat));
+        bat_raw.texture = Resources.Load<Texture2D>(bat_name);
     }
 
 
@@ -46,6 +52,14 @@ public class PlayerMovement : MonoBehaviour
         
         transform.position += movement * Time.deltaTime;
         animator.SetFloat("Speed", Mathf.Abs(horizontalMovement));
+
+      
+        if (source_bat == "bat")
+        {
+            Vector2 up = new Vector2(10, 0);
+            right_wall.transform.Translate(up * 10 * Time.deltaTime);
+            source_bat = "none";
+        }
 
         if (Input.GetAxis("Horizontal") < 0)
         {
@@ -77,6 +91,7 @@ public class PlayerMovement : MonoBehaviour
         {
             panel.SetActive(false);
         }
+       
 
 
     }
@@ -94,11 +109,15 @@ public class PlayerMovement : MonoBehaviour
             //collision.gameObject.SetActive(false);
             collision_count++;
             pickies.Add(collision.name);
+            source_bat = collision.name;
+            PlayerPrefs.SetString("Bat", pickies[0]);
             Debug.Log("Items: " + pickies);
           
         }
+        
 
     }
 
+  
 
 }
