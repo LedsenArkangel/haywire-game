@@ -1,0 +1,355 @@
+fileFormatVersion: 2
+guid: 68b86c684b4db864a9acf75a88d7f630
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -498414243965291831
+    second: draft_office_items_needs_scaling_0
+  - first:
+      213: 7304436202897502830
+    second: draft_office_items_needs_scaling_1
+  - first:
+      213: -6393606995156382131
+    second: draft_office_items_needs_scaling_2
+  - first:
+      213: -3282345547727658191
+    second: draft_office_items_needs_scaling_3
+  - first:
+      213: 8265787071340771095
+    second: draft_office_items_needs_scaling_4
+  - first:
+      213: -4492440391312845375
+    second: draft_office_items_needs_scaling_5
+  - first:
+      213: 2058052828861413139
+    second: draft_office_items_needs_scaling_6
+  - first:
+      213: -1623755323458609508
+    second: draft_office_items_needs_scaling_7
+  - first:
+      213: 1920262500239179441
+    second: draft_office_items_needs_scaling_8
+  - first:
+      213: -7575455330682502408
+    second: draft_office_items_needs_scaling_9
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: draft_office_items_needs_scaling_0
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 624
+        width: 640
+        height: 406
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8848b39d6cb659f46a8acde632374905
+      internalID: -498414243965291831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: draft_office_items_needs_scaling_1
+      rect:
+        serializedVersion: 2
+        x: 694
+        y: 916
+        width: 135
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f056a163d08125489cd8a1986ce7382
+      internalID: 7304436202897502830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: draft_office_items_needs_scaling_2
+      rect:
+        serializedVersion: 2
+        x: 916
+        y: 936
+        width: 144
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01ce99ca68384cd4cbc902554663ef38
+      internalID: -6393606995156382131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: draft_office_items_needs_scaling_3
+      rect:
+        serializedVersion: 2
+        x: 745
+        y: 723
+        width: 51
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb43aeed5e6f02b4cbc66280f6934be9
+      internalID: -3282345547727658191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: draft_office_items_needs_scaling_4
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 548
+        width: 253
+        height: 357
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29a20b9175fb3764798c3b11da0be72f
+      internalID: 8265787071340771095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: draft_office_items_needs_scaling_5
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 381
+        width: 172
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdf3e8fc87b8b214595fd81ed13db82b
+      internalID: -4492440391312845375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: draft_office_items_needs_scaling_6
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 434
+        width: 172
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e4d8753b20800946a4094141d736f5d
+      internalID: 2058052828861413139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: draft_office_items_needs_scaling_7
+      rect:
+        serializedVersion: 2
+        x: 663
+        y: 89
+        width: 203
+        height: 394
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2f39a8077c901a4b8f85f51d82c03c1
+      internalID: -1623755323458609508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: draft_office_items_needs_scaling_8
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 92
+        width: 297
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f627413d642f6249ba3608b4732241f
+      internalID: 1920262500239179441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: draft_office_items_needs_scaling_9
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 89
+        width: 178
+        height: 208
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcb57322bcb3fe844b3922d9f310df8b
+      internalID: -7575455330682502408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
