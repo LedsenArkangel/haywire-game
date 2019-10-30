@@ -10,17 +10,24 @@ public class PlatformMovement : MonoBehaviour
     //adjust this to change how high it goes
     bool collided = false;
     public Transform target;
-
+    Vector2 pos;
+    Vector2 target_y;
+    public void Start()
+    {
+     
+    }
     public void Update()
     {
-        Vector2 target_y = new Vector2(transform.position.x, target.position.y);
+        pos = gameObject.transform.position;
+        target_y = new Vector2(transform.position.x, target.position.y);
         if (collided == true)
         { 
-        Vector2 pos = gameObject.transform.position;
         //calculate what the new Y position will be
         float newY = Time.deltaTime * speed;
-        //set the object's Y to the new calculated Y
+        
         gameObject.transform.position = Vector2.MoveTowards(pos, target_y, newY);
+            //set the object's Y to the new calculated Y
+          
         }
     }
     void OnCollisionEnter2D(Collision2D collision)

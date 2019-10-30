@@ -56,7 +56,7 @@ public class PlayerMovement : MonoBehaviour
       
         if (source_bat == "bat")
         {
-            Vector2 up = new Vector2(15, 0);
+            Vector2 up = new Vector2(50, 0);
             right_wall.transform.Translate(up * 10 * Time.deltaTime);
             source_bat = "none";
         }
