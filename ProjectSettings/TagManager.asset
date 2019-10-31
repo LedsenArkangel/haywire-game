@@ -6,6 +6,9 @@ TagManager:
   tags:
   - PickUp
   - Inventory
+  - Enemy
+  - Laser
+  - Room
   layers:
   - Default
   - TransparentFX

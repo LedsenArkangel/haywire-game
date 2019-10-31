@@ -65,6 +65,12 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("IsJump", jump);
         }
 
+        // Landing
+        if (rigidbody2d.velocity.y == 0) {
+            jump = false;
+            animator.SetBool("IsJump", jump);
+        }
+
         // Set animation for throw
         if (Input.GetButtonDown("Jump"))
         {
@@ -96,14 +102,10 @@ public class PlayerMovement : MonoBehaviour
 
 
     }
-    public void OnLanding()
-    {
-        jump = false;
-        animator.SetBool("IsJump", jump);
 
-    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        // Pick up item on collision
         if(collision.gameObject.CompareTag("PickUp"))
         {
             Destroy(collision.gameObject);
@@ -113,12 +115,7 @@ public class PlayerMovement : MonoBehaviour
             source_bat = collision.name;
             PlayerPrefs.SetString("Bat", pickies[0]);
             Debug.Log("Items: " + pickies);
-          
         }
-        
-
     }
-
-  
 
 }
