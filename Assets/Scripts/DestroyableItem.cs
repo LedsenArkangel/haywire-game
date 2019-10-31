@@ -29,6 +29,7 @@ public class DestroyableItem : MonoBehaviour
             spriteRenderer.sprite = damagedSprite;
             source.PlayOneShot(soundEffect);
             flowchart.SetBooleanVariable("DestroyedServer" + this.gameObject.name, true);
+            flowchart.SendFungusMessage("CheckServer");
         }
     }
 }

@@ -35,8 +35,8 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        string bat_name= (PlayerPrefs.GetString("Bat", source_bat));
-        bat_raw.texture = Resources.Load<Texture2D>(bat_name);
+        // string bat_name= (PlayerPrefs.GetString("Bat", source_bat));
+        // bat_raw.texture = Resources.Load<Texture2D>(bat_name);
     }
 
 
@@ -75,7 +75,12 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButtonDown("Jump"))
         {
             animator.SetBool("IsThrow", true);
-
+            if (pickies.Count > 0)
+            {
+                //throw
+                Debug.Log("Items: " + pickies);
+                Instantiate(Resources.Load<GameObject>("/Prefab/" + pickies[0]), transform.position + new Vector3(20, 0, 0), Quaternion.identity);
+            }
         }
         else if (Input.GetButtonUp("Jump"))
         {
@@ -108,12 +113,8 @@ public class PlayerMovement : MonoBehaviour
         // Pick up item on collision
         if(collision.gameObject.CompareTag("PickUp"))
         {
-            Destroy(collision.gameObject);
-            //collision.gameObject.SetActive(false);
-            collision_count++;
             pickies.Add(collision.name);
-            source_bat = collision.name;
-            PlayerPrefs.SetString("Bat", pickies[0]);
+            Destroy(collision.gameObject);
             Debug.Log("Items: " + pickies);
         }
     }
