@@ -11,14 +11,12 @@ public class PlayerMovement : MonoBehaviour
     public GameObject panel;
     public GameObject right_wall;
     public float speed;
-    public float jumpspeed;
+    public float jumpSpeed;
     bool jump = false;
     bool crouch = false;
-    float horizontalMovement;
-    float verticalMovement;
     SpriteRenderer spriteRenderer;
     Vector3 movement;
-    Rigidbody2D rb;
+    Rigidbody2D rigidbody2d;
 
     public Texture2D bat;
     public RawImage bat_raw;
@@ -30,7 +28,7 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+        rigidbody2d = GetComponent<Rigidbody2D>();
         pickies = new List<string>();
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
@@ -44,23 +42,12 @@ public class PlayerMovement : MonoBehaviour
 
      void FixedUpdate()
     {
-        horizontalMovement = Input.GetAxis("Horizontal")*speed ;
-        verticalMovement = Input.GetAxis("Vertical")*jumpspeed ;
-
-        movement = new Vector3(horizontalMovement, verticalMovement,0);
-
-        
-        transform.position += movement * Time.deltaTime;
+        // Horizontal movement
+        float horizontalMovement = Input.GetAxis("Horizontal") * speed * Time.deltaTime;
+        transform.position += new Vector3(horizontalMovement, 0, 0);
+        // Running animation
         animator.SetFloat("Speed", Mathf.Abs(horizontalMovement));
-
-      
-        if (source_bat == "bat")
-        {
-            Vector2 up = new Vector2(50, 0);
-            right_wall.transform.Translate(up * 10 * Time.deltaTime);
-            source_bat = "none";
-        }
-
+        // Flip sprite with horizontal movement
         if (Input.GetAxis("Horizontal") < 0)
         {
             spriteRenderer.flipX = true;
@@ -69,11 +56,16 @@ public class PlayerMovement : MonoBehaviour
         {
             spriteRenderer.flipX = false;
         }
-        if (Input.GetAxis("Vertical") >0)
+
+        // Jump
+        if (Input.GetAxis("Vertical") > 0 && !jump)
         {
+            rigidbody2d.velocity = new Vector2(0.5f * horizontalMovement, jumpSpeed);
             jump = true;
             animator.SetBool("IsJump", jump);
         }
+
+        // Set animation for throw
         if (Input.GetButtonDown("Jump"))
         {
             animator.SetBool("IsThrow", true);
@@ -83,6 +75,15 @@ public class PlayerMovement : MonoBehaviour
         {
             animator.SetBool("IsThrow", false);
         }
+      
+        if (source_bat == "bat")
+        {
+            Vector2 up = new Vector2(50, 0);
+            right_wall.transform.Translate(up * 10 * Time.deltaTime);
+            source_bat = "none";
+        }
+
+        // Inventory
         if (Input.GetKeyDown(KeyCode.Q))
         {
             panel.SetActive(true);
