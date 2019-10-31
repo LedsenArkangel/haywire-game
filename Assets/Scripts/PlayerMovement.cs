@@ -3,15 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using Fungus;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public bool PlayerMove;
     public CharacterController2D controller;
+    public Flowchart flowchart;
     public Animator animator;
     public GameObject panel;
     public GameObject right_wall;
     public float speed;
-    public float jumpspeed;
+    public float jumpspeed = 6.0f;
     bool jump = false;
     bool crouch = false;
     float horizontalMovement;
@@ -23,7 +26,7 @@ public class PlayerMovement : MonoBehaviour
     public Texture2D bat;
     public RawImage bat_raw;
     public static List<string> pickies;
-    int collision_count;
+    int collision_count = 0;
 
     string source_bat;
       
@@ -44,62 +47,75 @@ public class PlayerMovement : MonoBehaviour
 
      void FixedUpdate()
     {
-        horizontalMovement = Input.GetAxis("Horizontal")*speed ;
-        verticalMovement = Input.GetAxis("Vertical")*jumpspeed ;
+        if (PlayerMove)
+        {
 
-        movement = new Vector3(horizontalMovement, verticalMovement,0);
+            horizontalMovement = Input.GetAxis("Horizontal") * speed;
+            verticalMovement = Input.GetAxis("Vertical") * jumpspeed;
 
+            movement = new Vector3(horizontalMovement, verticalMovement, 0);
+
+
+            transform.position += movement * Time.deltaTime;
+            animator.SetFloat("Speed", Mathf.Abs(horizontalMovement));
+
+
+            if (source_bat == "bat")
+            {
+                Vector2 up = new Vector2(50, 0);
+                right_wall.transform.Translate(up * 10 * Time.deltaTime);
+                source_bat = "none";
+            }
+
+            if (Input.GetAxis("Horizontal") < 0)
+            {
+                spriteRenderer.flipX = true;
+            }
+            else if (Input.GetAxis("Horizontal") > 0)
+            {
+                spriteRenderer.flipX = false;
+            }
+            if (Input.GetAxis("Vertical") > 0)
+            {
+                jump = true;
+                animator.SetBool("IsJump", jump);
+            }
+            if (Input.GetButtonDown("Jump"))
+            {
+                animator.SetBool("IsThrow", true);
+
+            }
+            else if (Input.GetButtonUp("Jump"))
+            {
+                animator.SetBool("IsThrow", false);
+            }
+            if (Input.GetKeyDown(KeyCode.Q))
+            {
+                panel.SetActive(true);
+            }
+            else if (Input.GetKeyUp(KeyCode.Q))
+            {
+                panel.SetActive(false);
+            }
+        }
         
-        transform.position += movement * Time.deltaTime;
-        animator.SetFloat("Speed", Mathf.Abs(horizontalMovement));
-
-      
-        if (source_bat == "bat")
-        {
-            Vector2 up = new Vector2(50, 0);
-            right_wall.transform.Translate(up * 10 * Time.deltaTime);
-            source_bat = "none";
-        }
-
-        if (Input.GetAxis("Horizontal") < 0)
-        {
-            spriteRenderer.flipX = true;
-        }
-        else if (Input.GetAxis("Horizontal") > 0)
-        {
-            spriteRenderer.flipX = false;
-        }
-        if (Input.GetAxis("Vertical") >0)
-        {
-            jump = true;
-            animator.SetBool("IsJump", jump);
-        }
-        if (Input.GetButtonDown("Jump"))
-        {
-            animator.SetBool("IsThrow", true);
-
-        }
-        else if (Input.GetButtonUp("Jump"))
-        {
-            animator.SetBool("IsThrow", false);
-        }
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            panel.SetActive(true);
-        }
-        else if (Input.GetKeyUp(KeyCode.Q))
-        {
-            panel.SetActive(false);
-        }
-       
-
-
     }
     public void OnLanding()
     {
         jump = false;
         animator.SetBool("IsJump", jump);
 
+    }
+
+    public void OnSomething()
+    {
+        if(PlayerMove)
+        {
+            PlayerMove = false;
+        } else
+        {
+            PlayerMove = true;
+        }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -108,10 +124,21 @@ public class PlayerMovement : MonoBehaviour
             Destroy(collision.gameObject);
             //collision.gameObject.SetActive(false);
             collision_count++;
+            Debug.Log(collision_count);
+            if (collision_count == 1)
+            {
+                flowchart.SendFungusMessage("bat");
+                Debug.Log("here");
+            }
+            if (collision_count == 2)
+            {
+                flowchart.SendFungusMessage("scissors");
+            }
             pickies.Add(collision.name);
             source_bat = collision.name;
             PlayerPrefs.SetString("Bat", pickies[0]);
             Debug.Log("Items: " + pickies);
+
           
         }
         

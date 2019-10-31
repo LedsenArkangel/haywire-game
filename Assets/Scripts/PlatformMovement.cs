@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Fungus;
 
 public class PlatformMovement : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class PlatformMovement : MonoBehaviour
     //adjust this to change how high it goes
     bool collided = false;
     public Transform target;
+    public Flowchart flowchart;
     Vector2 pos;
     Vector2 target_y;
     public void Start()
@@ -27,10 +29,9 @@ public class PlatformMovement : MonoBehaviour
         
         gameObject.transform.position = Vector2.MoveTowards(pos, target_y, newY);
             //set the object's Y to the new calculated Y
-          
         }
     }
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnCollisionEnter2D(UnityEngine.Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
@@ -38,8 +39,8 @@ public class PlatformMovement : MonoBehaviour
             //get the objects current position and put it in a variable so we can access it later with less code
 
             collided = true;
-
-
+            flowchart.SetBooleanVariable("Platform", true);
+            flowchart.SendFungusMessage("hi");
 
         }
     }

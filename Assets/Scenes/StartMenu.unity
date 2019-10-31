@@ -1420,6 +1420,11 @@ GameObject:
   - component: {fileID: 1756410477}
   - component: {fileID: 1756410476}
   - component: {fileID: 1756410475}
+  - component: {fileID: 1756410484}
+  - component: {fileID: 1756410487}
+  - component: {fileID: 1756410485}
+  - component: {fileID: 1756410486}
+  - component: {fileID: 1756410488}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -1440,11 +1445,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 0, y: 0}
+  scrollPos: {x: 171.38708, y: 282.62903}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
-  zoom: 1
+  zoom: 0.48437503
   scrollViewRect:
     serializedVersion: 2
     x: -343
@@ -1452,8 +1457,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 1756410482}
-  selectedCommands: []
+  - {fileID: 1756410476}
+  selectedCommands:
+  - {fileID: 1756410488}
   variables: []
   description: 
   stepPause: 0
@@ -1509,6 +1515,10 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 0}
   commandList:
+  - {fileID: 1756410487}
+  - {fileID: 1756410488}
+  - {fileID: 1756410486}
+  - {fileID: 1756410485}
   - {fileID: 1756410475}
 --- !u!114 &1756410477
 MonoBehaviour:
@@ -1639,6 +1649,7 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 1756410481}
   commandList:
+  - {fileID: 1756410484}
   - {fileID: 1756410480}
   - {fileID: 1756410479}
 --- !u!4 &1756410483
@@ -1655,6 +1666,91 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1756410484
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1756410473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1902400ccc99b45d69ad01cb86b57d0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 7
+  indentLevel: 0
+  musicClip: {fileID: 8300000, guid: 6c5a91fc2e1140d498956e6476cb26e6, type: 3}
+  atTime: 10
+  loop: 1
+  fadeDuration: 1
+--- !u!114 &1756410485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1756410473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b359b09a7ba2e4af981f07c07f8af85a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 9
+  indentLevel: 0
+--- !u!114 &1756410486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1756410473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3315ad2ebb85443909a1203d56d9344e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 10
+  indentLevel: 0
+  _duration:
+    floatRef: {fileID: 0}
+    floatVal: 1
+  durationOLD: 0
+--- !u!114 &1756410487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1756410473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1902400ccc99b45d69ad01cb86b57d0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 8
+  indentLevel: 0
+  musicClip: {fileID: 8300000, guid: 5620831ed06f06340bbe86a3441bd085, type: 3}
+  atTime: 23
+  loop: 1
+  fadeDuration: 1
+--- !u!114 &1756410488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1756410473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4015e84616cc45cfb498561373899d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 11
+  indentLevel: 0
+  volume: 1
+  fadeDuration: 1
+  waitUntilFinished: 1
 --- !u!1 &1981832161
 GameObject:
   m_ObjectHideFlags: 0
