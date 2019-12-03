@@ -10,6 +10,7 @@ TagManager:
   - Laser
   - Room
   - Destroyable
+  - DownOnly
   layers:
   - Default
   - TransparentFX

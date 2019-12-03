@@ -18,7 +18,7 @@ public class SnapCameraToRoom : MonoBehaviour
     }
 
     // Called when something enters into collision
-    void OnTriggerEnter2D(Collider2D other) {
+    void OnTriggerStay2D(Collider2D other) {
         if (other.CompareTag("Player"))
         {
             Camera.main.transform.position = new Vector3(transform.position.x, transform.position.y, -100);

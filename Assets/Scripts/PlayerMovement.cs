@@ -6,117 +6,100 @@ using System.Collections.Generic;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public CharacterController2D controller;
-    public Animator animator;
-    public GameObject panel;
-    public GameObject right_wall;
-    public float speed;
-    public float jumpSpeed;
-    bool jump = false;
-    bool crouch = false;
     SpriteRenderer spriteRenderer;
-    Vector3 movement;
-    Rigidbody2D rigidbody2d;
+    Animator animator;
+    Rigidbody2D rigidbody;
 
-    public Texture2D bat;
-    public RawImage bat_raw;
-    public static List<string> pickies;
-    int collision_count;
-
-    string source_bat;
-      
+    public float speed = 7;
+    public float jump = 100;
+    public float minJump = 10;
     // Start is called before the first frame update
     void Start()
     {
-        rigidbody2d = GetComponent<Rigidbody2D>();
-        pickies = new List<string>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
+        rigidbody = GetComponent<Rigidbody2D>();
     }
+
     // Update is called once per frame
     void Update()
     {
-        // string bat_name= (PlayerPrefs.GetString("Bat", source_bat));
-        // bat_raw.texture = Resources.Load<Texture2D>(bat_name);
-    }
-
-
-     void FixedUpdate()
-    {
-        // Horizontal movement
-        float horizontalMovement = Input.GetAxis("Horizontal") * speed * Time.deltaTime;
-        transform.position += new Vector3(horizontalMovement, 0, 0);
-        // Running animation
-        animator.SetFloat("Speed", Mathf.Abs(horizontalMovement));
-        // Flip sprite with horizontal movement
-        if (Input.GetAxis("Horizontal") < 0)
-        {
+        if (Input.GetAxis("Horizontal") < 0) {
+            // left
             spriteRenderer.flipX = true;
-        }
-        else if (Input.GetAxis("Horizontal") > 0)
-        {
+        } else if (Input.GetAxis("Horizontal") > 0) {
+            // right
             spriteRenderer.flipX = false;
         }
+    }
+
+    // Update is called at constant rate independent of frame rate
+    void FixedUpdate()
+    {
+        // Horizontal movement
+        var horizontalSpeed = Input.GetAxis("Horizontal") * speed * Time.deltaTime;
+        transform.position += new Vector3(horizontalSpeed, 0, 0);
 
         // Jump
-        if (Input.GetAxis("Vertical") > 0 && !jump)
-        {
-            rigidbody2d.velocity = new Vector2(0.5f * horizontalMovement, jumpSpeed);
-            jump = true;
-            animator.SetBool("IsJump", jump);
+        if (Input.GetAxis("Vertical") > 0 && !animator.GetBool("isJumping") && !animator.GetBool("isFalling")) {
+            var jumpForce = Input.GetAxis("Vertical") * jump * minJump;
+            rigidbody.AddForce(new Vector2(0, Mathf.Min(jump, jumpForce)), ForceMode2D.Impulse);
         }
 
-        // Landing
-        if (rigidbody2d.velocity.y == 0) {
-            jump = false;
-            animator.SetBool("IsJump", jump);
-        }
-
-        // Set animation for throw
-        if (Input.GetButtonDown("Jump"))
-        {
-            animator.SetBool("IsThrow", true);
-            if (pickies.Count > 0)
-            {
-                //throw
-                Debug.Log("Items: " + pickies);
-                Instantiate(Resources.Load<GameObject>("/Prefab/" + pickies[0]), transform.position + new Vector3(20, 0, 0), Quaternion.identity);
+        var verticalSpeed = rigidbody.velocity.y;
+        // Set animation
+        if (verticalSpeed > 0) {
+            // Jumping
+            animator.SetBool("isIdle", false);
+            animator.SetBool("isJumping", true);
+            animator.SetBool("isRunning", false);
+            animator.SetBool("isFalling", false);
+        } else if (verticalSpeed < 0) {
+            // Falling
+            animator.SetBool("isIdle", false);
+            animator.SetBool("isJumping", false);
+            animator.SetBool("isFalling", true);
+            animator.SetBool("isRunning", false);
+        } else {
+            animator.SetBool("isJumping", false);
+            animator.SetBool("isFalling", false);
+            if (Input.GetAxis("Horizontal") != 0) {
+                // Running 
+                animator.SetBool("isIdle", false);
+                animator.SetBool("isRunning", true);
+            } else {
+                // Idle
+                animator.SetBool("isIdle", true);
+                animator.SetBool("isRunning", false);
             }
         }
-        else if (Input.GetButtonUp("Jump"))
-        {
-            animator.SetBool("IsThrow", false);
-        }
-      
-        if (source_bat == "bat")
-        {
-            Vector2 up = new Vector2(50, 0);
-            right_wall.transform.Translate(up * 10 * Time.deltaTime);
-            source_bat = "none";
-        }
-
-        // Inventory
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            panel.SetActive(true);
-        }
-        else if (Input.GetKeyUp(KeyCode.Q))
-        {
-            panel.SetActive(false);
-        }
-       
-
-
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        // Pick up item on collision
-        if(collision.gameObject.CompareTag("PickUp"))
-        {
-            pickies.Add(collision.name);
-            Destroy(collision.gameObject);
-            Debug.Log("Items: " + pickies);
+    void OnCollisionEnter2D(Collision2D collision) {
+        if(collision.collider.tag == "DownOnly" && rigidbody.velocity.y >= 0) {
+            collision.collider.isTrigger = true;
+        }
+    } 
+
+    void OnTriggerEnter2D(Collider2D other) {
+        if (other.tag == "DownOnly" && rigidbody.velocity.y < 0) {
+            other.isTrigger = false;
+            rigidbody.velocity = new Vector2(rigidbody.velocity.x, 0);
+            if (Input.GetAxis("Horizontal") != 0) {
+                // Running 
+                animator.SetBool("isIdle", false);
+                animator.SetBool("isRunning", true);
+            } else {
+                // Idle
+                animator.SetBool("isIdle", true);
+                animator.SetBool("isRunning", false);
+            }
         }
     }
 
+    void OnCollisionExit2D(Collision2D collision) {
+        if(collision.collider.tag == "DownOnly") {
+            collision.collider.isTrigger = true;
+        }
+    }
 }
