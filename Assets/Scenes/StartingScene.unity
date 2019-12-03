@@ -146,6 +146,7 @@ GameObject:
   - component: {fileID: 241281891}
   - component: {fileID: 241281894}
   - component: {fileID: 241281895}
+  - component: {fileID: 241281890}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -221,10 +222,8 @@ MonoBehaviour:
     y: -340
     width: 1114
     height: 859
-  selectedBlocks:
-  - {fileID: 241281882}
-  selectedCommands:
-  - {fileID: 241281894}
+  selectedBlocks: []
+  selectedCommands: []
   variables: []
   description: 
   stepPause: 0
@@ -312,7 +311,7 @@ MonoBehaviour:
   callMode: 0
 --- !u!114 &241281881
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -365,7 +364,7 @@ MonoBehaviour:
   - {fileID: 241281886}
 --- !u!114 &241281883
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -386,6 +385,8 @@ MonoBehaviour:
   value:
     floatRef: {fileID: 0}
     floatVal: 0
+  animatorOLD: {fileID: 0}
+  parameterNameOLD: 
 --- !u!114 &241281886
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -497,7 +498,7 @@ MonoBehaviour:
   sceneNameOLD: 
 --- !u!114 &241281890
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -626,12 +627,12 @@ MonoBehaviour:
   itemId: 21
   indentLevel: 0
   storyText: "I hand picked you for the job, and you are going to do it come Hell
-    or high water! Is that clear, soldier?! I don\u2019t care how you do it, but you
-    get it done!\r"
+    or high water! Do I make myself clear, soldier?! I don\u2019t care how you do
+    it, but you get it done!\r"
   description: helloooo
   character: {fileID: 1238788449}
   portrait: {fileID: 0}
-  voiceOverClip: {fileID: 8300000, guid: 0b7f7950c55f8ed41b4e056eb7a608b1, type: 3}
+  voiceOverClip: {fileID: 8300000, guid: a2dc7a92f9e1b9048a18cf2651997b7a, type: 3}
   showAlways: 1
   showCount: 1
   extendPrevious: 0
@@ -661,7 +662,7 @@ MonoBehaviour:
   description: helloooo
   character: {fileID: 1238788449}
   portrait: {fileID: 0}
-  voiceOverClip: {fileID: 8300000, guid: bc3e161db0eed2c479ff7b5c059f670d, type: 3}
+  voiceOverClip: {fileID: 8300000, guid: f8b6fad0b556b9d4d97fe4f67d4a42ca, type: 3}
   showAlways: 1
   showCount: 1
   extendPrevious: 0
@@ -912,21 +913,21 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 148
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
+  BypassEffects: 1
+  BypassListenerEffects: 1
+  BypassReverbZones: 1
   rolloffCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -1176,7 +1177,7 @@ AudioDistortionFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 883041122}
   m_Enabled: 1
-  m_DistortionLevel: 0
+  m_DistortionLevel: 1
 --- !u!1 &999000061
 GameObject:
   m_ObjectHideFlags: 0
@@ -1417,6 +1418,7 @@ GameObject:
   - component: {fileID: 1238788450}
   - component: {fileID: 1238788449}
   - component: {fileID: 1238788451}
+  - component: {fileID: 1238788452}
   m_Layer: 0
   m_Name: Boss Man
   m_TagString: Untagged
@@ -1553,6 +1555,15 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!170 &1238788452
+AudioDistortionFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1238788448}
+  m_Enabled: 1
+  m_DistortionLevel: 1
 --- !u!1 &1308207145
 GameObject:
   m_ObjectHideFlags: 0
