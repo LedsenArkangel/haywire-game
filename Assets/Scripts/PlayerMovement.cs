@@ -52,14 +52,4 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter2D(Collider2D other) {
-        Debug.Log(rigidbody.velocity.y);
-        if(other.tag == "DownOnly") {
-            if (rigidbody.velocity.y < 0  ) {
-                Physics2D.IgnoreCollision(collider, other, false);
-            } else {
-                Physics2D.IgnoreCollision(collider, other);
-            }
-        }
-    }
 }
