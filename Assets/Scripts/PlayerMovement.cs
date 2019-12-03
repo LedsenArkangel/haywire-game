@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     SpriteRenderer spriteRenderer;
     Animator animator;
     Rigidbody2D rigidbody;
+    BoxCollider2D collider;
 
     public float speed = 7;
     public float jump = 100;
@@ -19,6 +20,7 @@ public class PlayerMovement : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
         rigidbody = GetComponent<Rigidbody2D>();
+        collider = GetComponent<BoxCollider2D>();
     }
 
     // Update is called once per frame
@@ -39,67 +41,25 @@ public class PlayerMovement : MonoBehaviour
         // Horizontal movement
         var horizontalSpeed = Input.GetAxis("Horizontal") * speed * Time.deltaTime;
         transform.position += new Vector3(horizontalSpeed, 0, 0);
+        animator.SetFloat("horizontal", Mathf.Abs(horizontalSpeed));
 
         // Jump
-        if (Input.GetAxis("Vertical") > 0 && !animator.GetBool("isJumping") && !animator.GetBool("isFalling")) {
+        var verticalSpeed = rigidbody.velocity.y;
+        animator.SetFloat("vertical", verticalSpeed);
+        if (Input.GetAxis("Vertical") > 0 && verticalSpeed == 0) {
             var jumpForce = Input.GetAxis("Vertical") * jump * minJump;
             rigidbody.AddForce(new Vector2(0, Mathf.Min(jump, jumpForce)), ForceMode2D.Impulse);
         }
-
-        var verticalSpeed = rigidbody.velocity.y;
-        // Set animation
-        if (verticalSpeed > 0) {
-            // Jumping
-            animator.SetBool("isIdle", false);
-            animator.SetBool("isJumping", true);
-            animator.SetBool("isRunning", false);
-            animator.SetBool("isFalling", false);
-        } else if (verticalSpeed < 0) {
-            // Falling
-            animator.SetBool("isIdle", false);
-            animator.SetBool("isJumping", false);
-            animator.SetBool("isFalling", true);
-            animator.SetBool("isRunning", false);
-        } else {
-            animator.SetBool("isJumping", false);
-            animator.SetBool("isFalling", false);
-            if (Input.GetAxis("Horizontal") != 0) {
-                // Running 
-                animator.SetBool("isIdle", false);
-                animator.SetBool("isRunning", true);
-            } else {
-                // Idle
-                animator.SetBool("isIdle", true);
-                animator.SetBool("isRunning", false);
-            }
-        }
     }
-
-    void OnCollisionEnter2D(Collision2D collision) {
-        if(collision.collider.tag == "DownOnly" && rigidbody.velocity.y >= 0) {
-            collision.collider.isTrigger = true;
-        }
-    } 
 
     void OnTriggerEnter2D(Collider2D other) {
-        if (other.tag == "DownOnly" && rigidbody.velocity.y < 0) {
-            other.isTrigger = false;
-            rigidbody.velocity = new Vector2(rigidbody.velocity.x, 0);
-            if (Input.GetAxis("Horizontal") != 0) {
-                // Running 
-                animator.SetBool("isIdle", false);
-                animator.SetBool("isRunning", true);
+        Debug.Log(rigidbody.velocity.y);
+        if(other.tag == "DownOnly") {
+            if (rigidbody.velocity.y < 0  ) {
+                Physics2D.IgnoreCollision(collider, other, false);
             } else {
-                // Idle
-                animator.SetBool("isIdle", true);
-                animator.SetBool("isRunning", false);
+                Physics2D.IgnoreCollision(collider, other);
             }
-        }
-    }
-
-    void OnCollisionExit2D(Collision2D collision) {
-        if(collision.collider.tag == "DownOnly") {
-            collision.collider.isTrigger = true;
         }
     }
 }

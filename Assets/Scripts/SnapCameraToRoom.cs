@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class SnapCameraToRoom : MonoBehaviour
 {
-    AudioSource audioSource;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +21,6 @@ public class SnapCameraToRoom : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             Camera.main.transform.position = new Vector3(transform.position.x, transform.position.y, -100);
-            audioSource.PlayOneShot(audioSource.clip);
         }
     }
 }

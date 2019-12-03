@@ -605,10 +605,12 @@
      <Compile Include="Assets\Scripts\CharacterController2D.cs" />
      <Compile Include="Assets\Scripts\DestroyableItem.cs" />
      <Compile Include="Assets\Scripts\ExitGame.cs" />
+     <Compile Include="Assets\Scripts\JumpRandomlyOnStart.cs" />
      <Compile Include="Assets\Scripts\PlatformInteraction.cs" />
      <Compile Include="Assets\Scripts\PlatformMovement.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\SnapCameraToRoom.cs" />
+     <Compile Include="Assets\Scripts\SpawnOnInteract.cs" />
      <None Include="Assets\Fungus\Thirdparty\ThirdPartyNotices.txt" />
      <None Include="Assets\Fungus\Thirdparty\TextMeshPro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
      <None Include="Assets\Fungus\Thirdparty\TextMeshPro\Resources\LineBreaking Leading Characters.txt" />
