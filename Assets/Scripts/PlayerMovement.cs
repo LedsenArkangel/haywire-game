@@ -10,7 +10,6 @@ public class PlayerMovement : MonoBehaviour
     Animator animator;
     Rigidbody2D rigidbody;
     BoxCollider2D collider;
-    Inventory inventory;
 
     public float speed = 7;
     public float jump = 100;
@@ -22,7 +21,6 @@ public class PlayerMovement : MonoBehaviour
         animator = GetComponent<Animator>();
         rigidbody = GetComponent<Rigidbody2D>();
         collider = GetComponent<BoxCollider2D>();
-        inventory = GetComponent<Inventory>();
     }
 
     // Update is called once per frame
@@ -38,7 +36,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetAxis("Jump") != 0) {
             // interact
-            animator.Play("interacting");
+            StartCoroutine(PlayInteracting());
         }
     }
 
@@ -59,11 +57,10 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    void OnTriggerStay2D(Collider2D other)
+    IEnumerator PlayInteracting()
     {
-        Debug.Log(other.tag);
-        if (other.tag == "PickUp" && Input.GetAxis("Jump") != 0) {
-            inventory.AddItem(other.gameObject);
-        }
+        animator.Play("interacting");
+        
+        yield return new WaitForSeconds(1);
     }
 }
