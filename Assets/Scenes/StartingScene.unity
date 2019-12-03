@@ -135,18 +135,21 @@ GameObject:
   - component: {fileID: 241281879}
   - component: {fileID: 241281882}
   - component: {fileID: 241281880}
-  - component: {fileID: 241281881}
-  - component: {fileID: 241281883}
   - component: {fileID: 241281884}
   - component: {fileID: 241281885}
   - component: {fileID: 241281887}
   - component: {fileID: 241281886}
   - component: {fileID: 241281892}
   - component: {fileID: 241281888}
-  - component: {fileID: 241281890}
   - component: {fileID: 241281889}
   - component: {fileID: 241281893}
   - component: {fileID: 241281891}
+  - component: {fileID: 241281894}
+  - component: {fileID: 241281883}
+  - component: {fileID: 241281895}
+  - component: {fileID: 241281881}
+  - component: {fileID: 241281896}
+  - component: {fileID: 241281890}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -193,9 +196,11 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 241281875}
   commandList:
+  - {fileID: 241281894}
   - {fileID: 241281883}
   - {fileID: 241281892}
   - {fileID: 241281879}
+  - {fileID: 241281895}
   - {fileID: 241281881}
   - {fileID: 241281880}
 --- !u!114 &241281877
@@ -225,7 +230,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 241281887}
   selectedCommands:
-  - {fileID: 241281893}
+  - {fileID: 241281890}
   variables: []
   description: 
   stepPause: 0
@@ -313,30 +318,29 @@ MonoBehaviour:
   callMode: 0
 --- !u!114 &241281881
 MonoBehaviour:
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 241281874}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5316d953c7abe498799575550c973535, type: 3}
+  m_Script: {fileID: 11500000, guid: ee63e642958494f1ebed8116ae4b1103, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 5
+  itemId: 24
   indentLevel: 0
-  animator:
+  _animator:
     animatorRef: {fileID: 0}
     animatorVal: {fileID: 344102770}
-  stateName:
+  _parameterName:
     stringRef: {fileID: 0}
-    stringVal: idle
-  layer:
-    integerRef: {fileID: 0}
-    integerVal: -1
-  time:
-    floatRef: {fileID: 0}
-    floatVal: 0
+    stringVal: isRunning
+  value:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  animatorOLD: {fileID: 0}
+  parameterNameOLD: 
 --- !u!114 &241281882
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -367,30 +371,29 @@ MonoBehaviour:
   - {fileID: 241281886}
 --- !u!114 &241281883
 MonoBehaviour:
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 241281874}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5316d953c7abe498799575550c973535, type: 3}
+  m_Script: {fileID: 11500000, guid: ee63e642958494f1ebed8116ae4b1103, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 8
+  itemId: 22
   indentLevel: 0
-  animator:
+  _animator:
     animatorRef: {fileID: 0}
     animatorVal: {fileID: 344102770}
-  stateName:
+  _parameterName:
     stringRef: {fileID: 0}
-    stringVal: running
-  layer:
-    integerRef: {fileID: 0}
-    integerVal: -1
-  time:
-    floatRef: {fileID: 0}
-    floatVal: 0
+    stringVal: isRunning
+  value:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  animatorOLD: {fileID: 0}
+  parameterNameOLD: 
 --- !u!114 &241281884
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -479,6 +482,7 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 0}
   commandList:
+  - {fileID: 241281896}
   - {fileID: 241281890}
   - {fileID: 241281893}
   - {fileID: 241281891}
@@ -544,30 +548,29 @@ MonoBehaviour:
   sceneNameOLD: 
 --- !u!114 &241281890
 MonoBehaviour:
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 241281874}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5316d953c7abe498799575550c973535, type: 3}
+  m_Script: {fileID: 11500000, guid: ee63e642958494f1ebed8116ae4b1103, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 17
+  itemId: 26
   indentLevel: 0
-  animator:
+  _animator:
     animatorRef: {fileID: 0}
     animatorVal: {fileID: 344102770}
-  stateName:
+  _parameterName:
     stringRef: {fileID: 0}
-    stringVal: running
-  layer:
-    integerRef: {fileID: 0}
-    integerVal: -1
-  time:
-    floatRef: {fileID: 0}
-    floatVal: 0
+    stringVal: isRunning
+  value:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  animatorOLD: {fileID: 0}
+  parameterNameOLD: 
 --- !u!114 &241281891
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -659,6 +662,81 @@ MonoBehaviour:
   isLocal: 0
   toTransformOLD: {fileID: 0}
   toPositionOLD: {x: 0, y: 0, z: 0}
+--- !u!114 &241281894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 241281874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee63e642958494f1ebed8116ae4b1103, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 21
+  indentLevel: 0
+  _animator:
+    animatorRef: {fileID: 0}
+    animatorVal: {fileID: 344102770}
+  _parameterName:
+    stringRef: {fileID: 0}
+    stringVal: isIdle
+  value:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  animatorOLD: {fileID: 0}
+  parameterNameOLD: 
+--- !u!114 &241281895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 241281874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee63e642958494f1ebed8116ae4b1103, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 23
+  indentLevel: 0
+  _animator:
+    animatorRef: {fileID: 0}
+    animatorVal: {fileID: 344102770}
+  _parameterName:
+    stringRef: {fileID: 0}
+    stringVal: isIdle
+  value:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  animatorOLD: {fileID: 0}
+  parameterNameOLD: 
+--- !u!114 &241281896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 241281874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee63e642958494f1ebed8116ae4b1103, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 25
+  indentLevel: 0
+  _animator:
+    animatorRef: {fileID: 0}
+    animatorVal: {fileID: 344102770}
+  _parameterName:
+    stringRef: {fileID: 0}
+    stringVal: isIdle
+  value:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  animatorOLD: {fileID: 0}
+  parameterNameOLD: 
 --- !u!1 &317647027
 GameObject:
   m_ObjectHideFlags: 0

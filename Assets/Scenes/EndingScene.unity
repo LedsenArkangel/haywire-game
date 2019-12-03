@@ -1138,16 +1138,20 @@ GameObject:
   - component: {fileID: 1534311515}
   - component: {fileID: 1534311507}
   - component: {fileID: 1534311508}
-  - component: {fileID: 1534311517}
   - component: {fileID: 1534311516}
   - component: {fileID: 1534311514}
   - component: {fileID: 1534311523}
   - component: {fileID: 1534311522}
   - component: {fileID: 1534311521}
   - component: {fileID: 1534311520}
-  - component: {fileID: 1534311519}
   - component: {fileID: 1534311518}
   - component: {fileID: 1534311524}
+  - component: {fileID: 1534311528}
+  - component: {fileID: 1534311527}
+  - component: {fileID: 1534311526}
+  - component: {fileID: 1534311525}
+  - component: {fileID: 1534311519}
+  - component: {fileID: 1534311517}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -1309,7 +1313,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 1534311521}
   selectedCommands:
-  - {fileID: 1534311518}
+  - {fileID: 1534311519}
   variables: []
   description: 
   stepPause: 0
@@ -1381,8 +1385,11 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 0}
   commandList:
+  - {fileID: 1534311528}
+  - {fileID: 1534311527}
   - {fileID: 1534311508}
-  - {fileID: 1534311517}
+  - {fileID: 1534311525}
+  - {fileID: 1534311526}
   - {fileID: 1534311514}
 --- !u!114 &1534311516
 MonoBehaviour:
@@ -1414,30 +1421,29 @@ MonoBehaviour:
   - {fileID: 1534311520}
 --- !u!114 &1534311517
 MonoBehaviour:
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1534311506}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5316d953c7abe498799575550c973535, type: 3}
+  m_Script: {fileID: 11500000, guid: ee63e642958494f1ebed8116ae4b1103, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 8
+  itemId: 23
   indentLevel: 0
-  animator:
+  _animator:
     animatorRef: {fileID: 0}
     animatorVal: {fileID: 1780439864}
-  stateName:
+  _parameterName:
     stringRef: {fileID: 0}
-    stringVal: idle
-  layer:
-    integerRef: {fileID: 0}
-    integerVal: -1
-  time:
-    floatRef: {fileID: 0}
-    floatVal: 0
+    stringVal: isIdle
+  value:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  animatorOLD: {fileID: 0}
+  parameterNameOLD: 
 --- !u!114 &1534311518
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -1479,30 +1485,29 @@ MonoBehaviour:
   toPositionOLD: {x: 0, y: 0, z: 0}
 --- !u!114 &1534311519
 MonoBehaviour:
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1534311506}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5316d953c7abe498799575550c973535, type: 3}
+  m_Script: {fileID: 11500000, guid: ee63e642958494f1ebed8116ae4b1103, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 15
+  itemId: 22
   indentLevel: 0
-  animator:
+  _animator:
     animatorRef: {fileID: 0}
     animatorVal: {fileID: 1780439864}
-  stateName:
+  _parameterName:
     stringRef: {fileID: 0}
-    stringVal: running
-  layer:
-    integerRef: {fileID: 0}
-    integerVal: -1
-  time:
-    floatRef: {fileID: 0}
-    floatVal: 0
+    stringVal: isRunning
+  value:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  animatorOLD: {fileID: 0}
+  parameterNameOLD: 
 --- !u!114 &1534311520
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -1550,6 +1555,7 @@ MonoBehaviour:
   eventHandler: {fileID: 0}
   commandList:
   - {fileID: 1534311519}
+  - {fileID: 1534311517}
   - {fileID: 1534311518}
   - {fileID: 1534311524}
 --- !u!114 &1534311522
@@ -1611,6 +1617,106 @@ MonoBehaviour:
   targetObject: {fileID: 1488866103}
   methodName: Show
   delay: 0
+--- !u!114 &1534311525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1534311506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee63e642958494f1ebed8116ae4b1103, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 21
+  indentLevel: 0
+  _animator:
+    animatorRef: {fileID: 0}
+    animatorVal: {fileID: 1780439864}
+  _parameterName:
+    stringRef: {fileID: 0}
+    stringVal: isRunning
+  value:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  animatorOLD: {fileID: 0}
+  parameterNameOLD: 
+--- !u!114 &1534311526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1534311506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee63e642958494f1ebed8116ae4b1103, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 20
+  indentLevel: 0
+  _animator:
+    animatorRef: {fileID: 0}
+    animatorVal: {fileID: 1780439864}
+  _parameterName:
+    stringRef: {fileID: 0}
+    stringVal: isIdle
+  value:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  animatorOLD: {fileID: 0}
+  parameterNameOLD: 
+--- !u!114 &1534311527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1534311506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee63e642958494f1ebed8116ae4b1103, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 19
+  indentLevel: 0
+  _animator:
+    animatorRef: {fileID: 0}
+    animatorVal: {fileID: 1780439864}
+  _parameterName:
+    stringRef: {fileID: 0}
+    stringVal: isIdle
+  value:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  animatorOLD: {fileID: 0}
+  parameterNameOLD: 
+--- !u!114 &1534311528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1534311506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee63e642958494f1ebed8116ae4b1103, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 18
+  indentLevel: 0
+  _animator:
+    animatorRef: {fileID: 0}
+    animatorVal: {fileID: 1780439864}
+  _parameterName:
+    stringRef: {fileID: 0}
+    stringVal: isRunning
+  value:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  animatorOLD: {fileID: 0}
+  parameterNameOLD: 
 --- !u!1 &1780439861
 GameObject:
   m_ObjectHideFlags: 0
