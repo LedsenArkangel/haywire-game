@@ -683,7 +683,7 @@ Transform:
   - {fileID: 1758532329}
   - {fileID: 1204782606}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &334525421
 GameObject:
@@ -1973,7 +1973,7 @@ Transform:
   - {fileID: 873872133}
   - {fileID: 1508910837}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &777448567
 GameObject:
@@ -2420,7 +2420,7 @@ Transform:
   m_Children:
   - {fileID: 1499694918}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &954749748
 GameObject:
@@ -2586,7 +2586,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1005943531
 GameObject:
@@ -2767,7 +2767,7 @@ Transform:
   - {fileID: 1411545124}
   - {fileID: 601202010}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1024389772
 GameObject:
@@ -3211,18 +3211,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60f174bb45931904c8352d03df3e08fe, type: 3}
---- !u!114 &1325880924 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8656283400330803496, guid: 60f174bb45931904c8352d03df3e08fe,
-    type: 3}
-  m_PrefabInstance: {fileID: 1325880923}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a334fe2ffb574b3583ff3b18b4792d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1333508390
 GameObject:
   m_ObjectHideFlags: 0
@@ -3548,7 +3536,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4056,7 +4044,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1499694917
 GameObject:
@@ -5437,46 +5425,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flowchart
       objectReference: {fileID: 0}
-    - target: {fileID: 8656283400330803496, guid: 60f174bb45931904c8352d03df3e08fe,
-        type: 3}
-      propertyPath: selectedCommands.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8656283400330803496, guid: 60f174bb45931904c8352d03df3e08fe,
-        type: 3}
-      propertyPath: selectedBlocks.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8656283400330803496, guid: 60f174bb45931904c8352d03df3e08fe,
-        type: 3}
-      propertyPath: variables.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 8656283400330803496, guid: 60f174bb45931904c8352d03df3e08fe,
-        type: 3}
-      propertyPath: scrollPos.x
-      value: -92.04334
-      objectReference: {fileID: 0}
-    - target: {fileID: 8656283400330803496, guid: 60f174bb45931904c8352d03df3e08fe,
-        type: 3}
-      propertyPath: scrollPos.y
-      value: 308.15378
-      objectReference: {fileID: 0}
-    - target: {fileID: 8656283400330803496, guid: 60f174bb45931904c8352d03df3e08fe,
-        type: 3}
-      propertyPath: selectedBlocks.Array.data[0]
-      value: 
-      objectReference: {fileID: 8656283401125543019}
-    - target: {fileID: 8656283400330803496, guid: 60f174bb45931904c8352d03df3e08fe,
-        type: 3}
-      propertyPath: variables.Array.data[2]
-      value: 
-      objectReference: {fileID: 8656283401125543018}
-    - target: {fileID: 8656283400330803496, guid: 60f174bb45931904c8352d03df3e08fe,
-        type: 3}
-      propertyPath: variables.Array.data[3]
-      value: 
-      objectReference: {fileID: 8656283401125543017}
     - target: {fileID: 8656283400330803509, guid: 60f174bb45931904c8352d03df3e08fe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5532,6 +5480,46 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8656283400330803496, guid: 60f174bb45931904c8352d03df3e08fe,
+        type: 3}
+      propertyPath: selectedCommands.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8656283400330803496, guid: 60f174bb45931904c8352d03df3e08fe,
+        type: 3}
+      propertyPath: selectedBlocks.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8656283400330803496, guid: 60f174bb45931904c8352d03df3e08fe,
+        type: 3}
+      propertyPath: variables.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8656283400330803496, guid: 60f174bb45931904c8352d03df3e08fe,
+        type: 3}
+      propertyPath: scrollPos.x
+      value: -92.04334
+      objectReference: {fileID: 0}
+    - target: {fileID: 8656283400330803496, guid: 60f174bb45931904c8352d03df3e08fe,
+        type: 3}
+      propertyPath: scrollPos.y
+      value: 308.15378
+      objectReference: {fileID: 0}
+    - target: {fileID: 8656283400330803496, guid: 60f174bb45931904c8352d03df3e08fe,
+        type: 3}
+      propertyPath: selectedBlocks.Array.data[0]
+      value: 
+      objectReference: {fileID: 8656283401125543019}
+    - target: {fileID: 8656283400330803496, guid: 60f174bb45931904c8352d03df3e08fe,
+        type: 3}
+      propertyPath: variables.Array.data[2]
+      value: 
+      objectReference: {fileID: 8656283401125543018}
+    - target: {fileID: 8656283400330803496, guid: 60f174bb45931904c8352d03df3e08fe,
+        type: 3}
+      propertyPath: variables.Array.data[3]
+      value: 
+      objectReference: {fileID: 8656283401125543017}
     - target: {fileID: 8656283400330803497, guid: 60f174bb45931904c8352d03df3e08fe,
         type: 3}
       propertyPath: animator.animatorVal
@@ -5750,6 +5738,18 @@ PrefabInstance:
       propertyPath: eventHandler
       value: 
       objectReference: {fileID: 8656283401125543040}
+    - target: {fileID: 8656283400330803481, guid: 60f174bb45931904c8352d03df3e08fe,
+        type: 3}
+      propertyPath: storyText
+      value: Welcome to the Corporate Headquarters, Repairman. I am the building supervisor.
+        I would tell you my name but you won't be staying long enough to use it.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8656283400330803686, guid: 60f174bb45931904c8352d03df3e08fe,
+        type: 3}
+      propertyPath: storyText
+      value: That means I have more authority than you do, and like a good worker,
+        you should obey me.
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8656283400330803458, guid: 60f174bb45931904c8352d03df3e08fe, type: 3}
     - {fileID: 8656283400330803463, guid: 60f174bb45931904c8352d03df3e08fe, type: 3}
@@ -6481,3 +6481,58 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentBlock: {fileID: 8656283401125543038}
   message: 
+--- !u!114 &8656283401125543052
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8656283401125543016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 67
+  indentLevel: 0
+  storyText: '
+
+'
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &8656283401125543053
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8656283401125543016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 1002.36066
+    y: 129.64716
+    width: 120
+    height: 40
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  itemId: 66
+  blockName: New Block
+  description: 
+  eventHandler: {fileID: 0}
+  commandList:
+  - {fileID: 8656283401125543052}
