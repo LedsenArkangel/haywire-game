@@ -63,4 +63,10 @@ public class PlayerMovement : MonoBehaviour
         
         yield return new WaitForSeconds(1);
     }
+
+    void OnCollisionEnter2D(Collision2D collision) {
+        if (collision.collider.name == "DropDown") {
+            Physics2D.IgnoreCollision(collider, collision.collider);
+        }
+    }
 }

@@ -222,8 +222,10 @@ MonoBehaviour:
     y: -340
     width: 1114
     height: 859
-  selectedBlocks: []
-  selectedCommands: []
+  selectedBlocks:
+  - {fileID: 241281887}
+  selectedCommands:
+  - {fileID: 241281889}
   variables: []
   description: 
   stepPause: 0
@@ -494,7 +496,7 @@ MonoBehaviour:
   _sceneName:
     stringRef: {fileID: 0}
     stringVal: MainGame
-  loadingImage: {fileID: 0}
+  loadingImage: {fileID: 2800000, guid: 58ca81f58ad65784da1bd3bf11357d0b, type: 3}
   sceneNameOLD: 
 --- !u!114 &241281890
 MonoBehaviour:

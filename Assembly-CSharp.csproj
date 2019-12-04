@@ -609,12 +609,15 @@
      <Compile Include="Assets\Scripts\ExitGame.cs" />
      <Compile Include="Assets\Scripts\Inventory.cs" />
      <Compile Include="Assets\Scripts\JumpRandomlyOnStart.cs" />
+     <Compile Include="Assets\Scripts\PaperBehavior.cs" />
      <Compile Include="Assets\Scripts\PlatformMovement.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\SnapCameraToRoom.cs" />
+     <Compile Include="Assets\Scripts\SpawnerBehavior.cs" />
      <Compile Include="Assets\Scripts\SpawnOnInteract.cs" />
      <Compile Include="Assets\Scripts\SpawnOnTrigger.cs" />
      <Compile Include="Assets\Scripts\TRexBehavior.cs" />
+     <Compile Include="Assets\Scripts\TRexRoomBehavior.cs" />
      <Compile Include="Assets\Scripts\WarpBehavior.cs" />
      <None Include="Assets\Fungus\Thirdparty\ThirdPartyNotices.txt" />
      <None Include="Assets\Fungus\Thirdparty\TextMeshPro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
