@@ -598,8 +598,6 @@
      <Compile Include="Assets\FungusExamples\FirstPerson\Scripts\SimpleMouseLook.cs" />
      <Compile Include="Assets\FungusExamples\FungusLua\Bindings\CustomScript.cs" />
      <Compile Include="Assets\FungusExamples\MonoBehEvents\SpriteColorChangeFromFungusMouseEvent.cs" />
-     <Compile Include="Assets\Kino\Glitch\AnalogGlitch.cs" />
-     <Compile Include="Assets\Kino\Glitch\DigitalGlitch.cs" />
      <Compile Include="Assets\Scripts\AiFloatMovement.cs" />
      <Compile Include="Assets\Scripts\Boundaries.cs" />
      <Compile Include="Assets\Scripts\CharacterController2D.cs" />
@@ -624,10 +622,8 @@
      <None Include="Assets\Fungus\Thirdparty\TextMeshPro\Resources\LineBreaking Leading Characters.txt" />
      <None Include="Assets\Fungus\Thirdparty\FungusLua\Thirdparty\JSON\readme.txt" />
      <None Include="Assets\Fonts\Tomorrow\OFL.txt" />
-     <None Include="Assets\Kino\Glitch\Shader\AnalogGlitch.shader" />
      <None Include="Assets\FungusExamples\FungusLua\Localization\stringtable.txt" />
      <None Include="Assets\Fungus\Docs\README.txt" />
-     <None Include="Assets\Kino\Glitch\Shader\DigitalGlitch.shader" />
      <None Include="Assets\FungusExamples\FirstPerson\Visuals\Google Poly\Button\CC-BY.txt" />
      <None Include="Assets\Fungus\Thirdparty\TextMeshPro\Resources\Shaders\TMPro_Properties.cginc" />
      <None Include="Assets\Fungus\Fonts\Exo2\OFL.txt" />

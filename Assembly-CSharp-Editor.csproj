@@ -103,8 +103,6 @@
      <Compile Include="Assets\Fungus\Thirdparty\FungusLua\Scripts\Editor\MenuItems.cs" />
      <Compile Include="Assets\Fungus\Thirdparty\LineEndings\Editor\LineEndingsEditMenu.cs" />
      <Compile Include="Assets\Fungus\Thirdparty\Usfxr\Editor\SfxrGenerator.cs" />
-     <Compile Include="Assets\Kino\Glitch\Editor\AnalogGlitchEditor.cs" />
-     <Compile Include="Assets\Kino\Glitch\Editor\DigitalGlitchEditor.cs" />
  <Reference Include="UnityEditor.TestRunner">
  <HintPath>D:/StudioProjects/haywire-game/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
  </Reference>
