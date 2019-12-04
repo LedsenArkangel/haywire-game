@@ -5,6 +5,7 @@ using UnityEngine;
 public class SpawnOnInteract : MonoBehaviour
 {
     public GameObject item;
+    public string requiredItemName = "";
     string tag;
     // Start is called before the first frame update
     void Start()
@@ -20,8 +21,10 @@ public class SpawnOnInteract : MonoBehaviour
 
     void OnTriggerStay2D(Collider2D other) 
     {
-        tag = other.tag;
-        Invoke("SpawnItem", 1.0F);
+        if (requiredItemName == "" || Inventory.GetSelectedItemName() == requiredItemName) {
+            tag = other.tag;
+            Invoke("SpawnItem", 1.0F);
+        }
     }
 
     void SpawnItem()
