@@ -11,6 +11,7 @@ TagManager:
   - Room
   - Destroyable
   - DownOnly
+  - Ladder
   layers:
   - Default
   - TransparentFX

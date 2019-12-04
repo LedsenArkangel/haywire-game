@@ -78,6 +78,9 @@ public class Inventory : MonoBehaviour
         } else if (item.name == "Scissors") {
             imgRectTransform.Rotate(0.0F, 0.0F, 99.29301F);
             imgRectTransform.sizeDelta = new Vector2(itemImage.sprite.rect.width * 10, itemImage.sprite.rect.height * 10);
+        } else if (item.name.Contains("Baseball Bat")) {
+            imgRectTransform.Rotate(0.0F, 0.0F, 99.29301F);
+            imgRectTransform.sizeDelta = new Vector2(itemImage.sprite.rect.width * 5, itemImage.sprite.rect.height * 5);
         } else {
             imgRectTransform.sizeDelta = new Vector2(Mathf.Min(maxWidth, itemImage.sprite.rect.width), Mathf.Min(maxHeight, itemImage.sprite.rect.height));
         }
