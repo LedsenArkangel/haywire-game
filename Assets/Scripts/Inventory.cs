@@ -8,12 +8,12 @@ public class Inventory : MonoBehaviour
     public GameObject selector;
     public Vector3 offset = new Vector3(0, 0, 0);
 
-    List<GameObject> items;
-    int selectedItem = -1; // index in items
+    static List<string> items;
+    static int selectedItem = -1; // index in items
     float maxWidth = 675.5F;
     float maxHeight = 336.5F;
 
-    public GameObject GetSelectedItem()
+    public static string GetSelectedItemName()
     {
         if (selectedItem == -1) {
             return null;
@@ -25,7 +25,7 @@ public class Inventory : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        items = new List<GameObject>();
+        items = new List<string>();
         foreach(GameObject panel in panels)
         {
             var itemName = panel.transform.GetChild(0).gameObject.GetComponent<UnityEngine.UI.Text>();
@@ -61,8 +61,8 @@ public class Inventory : MonoBehaviour
 
     void AddItem(GameObject item)
     {
-        items.Add(item);
-        var panel = panels[items.IndexOf(item)];
+        items.Add(item.name);
+        var panel = panels[items.IndexOf(item.name)];
         var itemName = panel.transform.GetChild(0).gameObject.GetComponent<UnityEngine.UI.Text>();
         var imgObj = panel.transform.GetChild(1).gameObject;
         var imgRectTransform = imgObj.GetComponent<RectTransform>();
@@ -71,6 +71,8 @@ public class Inventory : MonoBehaviour
         itemName.text = item.name;
         // Add item to panel
         itemImage.sprite = item.GetComponent<SpriteRenderer>().sprite;
+
+        // Resize the sprite
         if (item.name == "ID Card") {
             imgRectTransform.sizeDelta = new Vector2(itemImage.sprite.rect.width * 10, itemImage.sprite.rect.height * 10);
         } else if (item.name == "Scissors") {
@@ -88,12 +90,14 @@ public class Inventory : MonoBehaviour
     {
         var selectorImg = selector.GetComponent<UnityEngine.UI.Image>();
         if (index == -1) {
+            // Make transparent
             selectorImg.color = new Color(selectorImg.color.r, selectorImg.color.g, selectorImg.color.b, 0.0F);
         } else {
             if (selectorImg.color.a == 0.0F) {
+                // Make solid
                 selectorImg.color = new Color(selectorImg.color.r, selectorImg.color.g, selectorImg.color.b, 0.9F);
             }
-
+            // Move it behind the panel
             selector.transform.position = panels[index].transform.position + offset;
         }
     }

@@ -5,13 +5,11 @@ using UnityEngine;
 public class DoorLockBehavior : MonoBehaviour
 {
     Animator animator;
-    public bool isLocked = true;
     public DoorBehavior door;
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
-        SetLock(isLocked);
     }
 
     // Update is called once per frame
@@ -20,15 +18,12 @@ public class DoorLockBehavior : MonoBehaviour
         
     }
 
-    void SetLock(bool b)
-    {
-        door.Enable(b);
-        if (b) {
-            animator.speed = -0.2F;
-            animator.Play("unlocking");
-        } else {
-            animator.speed = 0.2F;
-            animator.Play("unlocking");
+    void OnTriggerStay2D(Collider2D other) {
+        if (other.tag == "Player" && Input.GetAxis("Jump") != 0) {
+            if (door.isLocked && Inventory.GetSelectedItemName() == "ID Card") {
+                door.Lock(false);
+                animator.SetTrigger("unlocking");
+            }
         }
     }
 }
