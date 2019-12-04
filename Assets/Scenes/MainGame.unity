@@ -2157,6 +2157,133 @@ EdgeCollider2D:
   m_Points:
   - {x: 9.620991, y: 5.4559584}
   - {x: 9.6, y: -5.405903}
+--- !u!1 &601249347
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 601249349}
+  - component: {fileID: 601249348}
+  m_Layer: 0
+  m_Name: Background Music
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &601249348
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 601249347}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 7cb2b84f7f16da9409c6364a59189d3a, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.121
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &601249349
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 601249347}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &604224800
 GameObject:
   m_ObjectHideFlags: 0
@@ -6763,9 +6890,6 @@ GameObject:
   - component: {fileID: 1643892931}
   - component: {fileID: 1643892930}
   - component: {fileID: 1643892929}
-  - component: {fileID: 1643892928}
-  - component: {fileID: 1643892927}
-  - component: {fileID: 1643892926}
   - component: {fileID: 1643892925}
   m_Layer: 0
   m_Name: EventFlowchart
@@ -6788,126 +6912,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentBlock: {fileID: 1643892930}
   waitForFrames: 1
---- !u!114 &1643892926
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1643892924}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb77d0ce495044f6e9feb91b31798e8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 5
-  indentLevel: 0
-  variable: {fileID: 0}
-  setOperator: 0
-  booleanData:
-    booleanRef: {fileID: 0}
-    booleanVal: 1
-  integerData:
-    integerRef: {fileID: 0}
-    integerVal: 0
-  floatData:
-    floatRef: {fileID: 0}
-    floatVal: 0
-  stringData:
-    stringRef: {fileID: 0}
-    stringVal: 
-  animatorData:
-    animatorRef: {fileID: 0}
-    animatorVal: {fileID: 0}
-  audioSourceData:
-    audioSourceRef: {fileID: 0}
-    audioSourceVal: {fileID: 0}
-  colorData:
-    colorRef: {fileID: 0}
-    colorVal: {r: 0, g: 0, b: 0, a: 0}
-  gameObjectData:
-    gameObjectRef: {fileID: 0}
-    gameObjectVal: {fileID: 0}
-  materialData:
-    materialRef: {fileID: 0}
-    materialVal: {fileID: 0}
-  objectData:
-    objectRef: {fileID: 0}
-    objectVal: {fileID: 0}
-  rigidbody2DData:
-    rigidbody2DRef: {fileID: 0}
-    rigidbody2DVal: {fileID: 0}
-  spriteData:
-    spriteRef: {fileID: 0}
-    spriteVal: {fileID: 0}
-  textureData:
-    textureRef: {fileID: 0}
-    textureVal: {fileID: 0}
-  transformData:
-    transformRef: {fileID: 0}
-    transformVal: {fileID: 0}
-  vector2Data:
-    vector2Ref: {fileID: 0}
-    vector2Val: {x: 0, y: 0}
-  vector3Data:
-    vector3Ref: {fileID: 0}
-    vector3Val: {x: 0, y: 0, z: 0}
---- !u!114 &1643892927
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1643892924}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 4
-  indentLevel: 0
-  storyText: "You can move yourself towards the exit using the arrow keys. Polite
-    company will not use the spacebar indoors.\r"
-  description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
-  voiceOverClip: {fileID: 8300000, guid: 5ddae85e1aa21ae47ab10cbb0ec6a3c9, type: 3}
-  showAlways: 1
-  showCount: 1
-  extendPrevious: 0
-  fadeWhenDone: 1
-  waitForClick: 0
-  stopVoiceover: 0
-  waitForVO: 1
-  setSayDialog: {fileID: 0}
---- !u!114 &1643892928
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1643892924}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 3
-  indentLevel: 0
-  storyText: Hey, the repairman is here. Could you look at the door? I hear it likes
-    to hit people on their way out.
-  description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
-  voiceOverClip: {fileID: 8300000, guid: 300aa052c00676c78b7f138147b36e77, type: 3}
-  showAlways: 1
-  showCount: 1
-  extendPrevious: 0
-  fadeWhenDone: 1
-  waitForClick: 0
-  stopVoiceover: 0
-  waitForVO: 1
-  setSayDialog: {fileID: 0}
 --- !u!114 &1643892929
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -6960,9 +6964,6 @@ MonoBehaviour:
   eventHandler: {fileID: 1643892925}
   commandList:
   - {fileID: 1643892929}
-  - {fileID: 1643892928}
-  - {fileID: 1643892927}
-  - {fileID: 1643892926}
 --- !u!114 &1643892931
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6987,7 +6988,8 @@ MonoBehaviour:
     y: -340
     width: 1114
     height: 859
-  selectedBlocks: []
+  selectedBlocks:
+  - {fileID: 1643892930}
   selectedCommands: []
   variables: []
   description: 
@@ -8115,30 +8117,100 @@ PrefabInstance:
       propertyPath: selectedBlocks.Array.size
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7482303443305690000, guid: 89b5bdfa8daccaa4fad4094389279515,
+    - target: {fileID: 7482303443305690015, guid: 89b5bdfa8daccaa4fad4094389279515,
+        type: 3}
+      propertyPath: nodeRect.x
+      value: 617.0509
+      objectReference: {fileID: 0}
+    - target: {fileID: 7482303443305690005, guid: 89b5bdfa8daccaa4fad4094389279515,
         type: 3}
       propertyPath: commandList.Array.size
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7482303443305690005, guid: 89b5bdfa8daccaa4fad4094389279515,
+        type: 3}
+      propertyPath: nodeRect.width
+      value: 127.58622
+      objectReference: {fileID: 0}
+    - target: {fileID: 7482303443305690005, guid: 89b5bdfa8daccaa4fad4094389279515,
+        type: 3}
+      propertyPath: commandList.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7482303443305690000, guid: 89b5bdfa8daccaa4fad4094389279515,
+        type: 3}
+      propertyPath: commandList.Array.size
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7482303443305690000, guid: 89b5bdfa8daccaa4fad4094389279515,
         type: 3}
       propertyPath: commandList.Array.data[0]
       value: 
+      objectReference: {fileID: 2002005888}
+    - target: {fileID: 7482303443305690000, guid: 89b5bdfa8daccaa4fad4094389279515,
+        type: 3}
+      propertyPath: nodeRect.x
+      value: 305.94635
       objectReference: {fileID: 0}
+    - target: {fileID: 7482303443305690003, guid: 89b5bdfa8daccaa4fad4094389279515,
+        type: 3}
+      propertyPath: commandList.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7482303443305690003, guid: 89b5bdfa8daccaa4fad4094389279515,
+        type: 3}
+      propertyPath: nodeRect.width
+      value: 127.58622
+      objectReference: {fileID: 0}
+    - target: {fileID: 7482303443305690003, guid: 89b5bdfa8daccaa4fad4094389279515,
+        type: 3}
+      propertyPath: commandList.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7482303443305689998, guid: 89b5bdfa8daccaa4fad4094389279515,
+        type: 3}
+      propertyPath: commandList.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7482303443305689998, guid: 89b5bdfa8daccaa4fad4094389279515,
+        type: 3}
+      propertyPath: nodeRect.width
+      value: 127.58622
+      objectReference: {fileID: 0}
+    - target: {fileID: 7482303443305689998, guid: 89b5bdfa8daccaa4fad4094389279515,
+        type: 3}
+      propertyPath: commandList.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7482303443305689989, guid: 89b5bdfa8daccaa4fad4094389279515,
+        type: 3}
+      propertyPath: voiceOverClip
+      value: 
+      objectReference: {fileID: 8300000, guid: cfbefba36bb19df48be9189ffe838f6e, type: 3}
     - target: {fileID: 7482303443305689990, guid: 89b5bdfa8daccaa4fad4094389279515,
         type: 3}
       propertyPath: commandList.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7482303443305689990, guid: 89b5bdfa8daccaa4fad4094389279515,
+        type: 3}
+      propertyPath: nodeRect.width
+      value: 126.8293
+      objectReference: {fileID: 0}
+    - target: {fileID: 7482303443305689990, guid: 89b5bdfa8daccaa4fad4094389279515,
+        type: 3}
+      propertyPath: commandList.Array.data[0]
+      value: 
+      objectReference: {fileID: 2002005887}
     - target: {fileID: 7482303443305689985, guid: 89b5bdfa8daccaa4fad4094389279515,
         type: 3}
       propertyPath: commandList.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7482303443305689985, guid: 89b5bdfa8daccaa4fad4094389279515,
         type: 3}
       propertyPath: nodeRect.width
-      value: 122
+      value: 128.04881
       objectReference: {fileID: 0}
     - target: {fileID: 7482303443305689985, guid: 89b5bdfa8daccaa4fad4094389279515,
         type: 3}
@@ -8150,6 +8222,62 @@ PrefabInstance:
       propertyPath: nodeRect.y
       value: -112.32118
       objectReference: {fileID: 0}
+    - target: {fileID: 7482303443305689985, guid: 89b5bdfa8daccaa4fad4094389279515,
+        type: 3}
+      propertyPath: commandList.Array.data[0]
+      value: 
+      objectReference: {fileID: 2002005886}
+    - target: {fileID: 7482303443305690047, guid: 89b5bdfa8daccaa4fad4094389279515,
+        type: 3}
+      propertyPath: commandList.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7482303443305690012, guid: 89b5bdfa8daccaa4fad4094389279515,
+        type: 3}
+      propertyPath: storyText
+      value: Welcome to the Corporate Headquarters. I am the building supervisor.
+        I would tell you my name but you won't be staying long enough to use it.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7482303443305689966, guid: 89b5bdfa8daccaa4fad4094389279515,
+        type: 3}
+      propertyPath: commandList.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7482303443305689966, guid: 89b5bdfa8daccaa4fad4094389279515,
+        type: 3}
+      propertyPath: nodeRect.x
+      value: 902.2167
+      objectReference: {fileID: 0}
+    - target: {fileID: 7482303443305689966, guid: 89b5bdfa8daccaa4fad4094389279515,
+        type: 3}
+      propertyPath: eventHandler
+      value: 
+      objectReference: {fileID: 2002005885}
+    - target: {fileID: 7482303443305689966, guid: 89b5bdfa8daccaa4fad4094389279515,
+        type: 3}
+      propertyPath: commandList.Array.data[3]
+      value: 
+      objectReference: {fileID: 2002005882}
+    - target: {fileID: 7482303443305689966, guid: 89b5bdfa8daccaa4fad4094389279515,
+        type: 3}
+      propertyPath: commandList.Array.data[1]
+      value: 
+      objectReference: {fileID: 2002005884}
+    - target: {fileID: 7482303443305689966, guid: 89b5bdfa8daccaa4fad4094389279515,
+        type: 3}
+      propertyPath: commandList.Array.data[2]
+      value: 
+      objectReference: {fileID: 2002005880}
+    - target: {fileID: 7482303443305689966, guid: 89b5bdfa8daccaa4fad4094389279515,
+        type: 3}
+      propertyPath: commandList.Array.data[4]
+      value: 
+      objectReference: {fileID: 2002005878}
+    - target: {fileID: 7482303443305689967, guid: 89b5bdfa8daccaa4fad4094389279515,
+        type: 3}
+      propertyPath: voiceOverClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 4101d6456acd501419c7eb665c8182a8, type: 3}
     - target: {fileID: 7482303443305689962, guid: 89b5bdfa8daccaa4fad4094389279515,
         type: 3}
       propertyPath: commandList.Array.size
@@ -8158,7 +8286,7 @@ PrefabInstance:
     - target: {fileID: 7482303443305689962, guid: 89b5bdfa8daccaa4fad4094389279515,
         type: 3}
       propertyPath: nodeRect.width
-      value: 126.8
+      value: 135.24591
       objectReference: {fileID: 0}
     - target: {fileID: 7482303443305689962, guid: 89b5bdfa8daccaa4fad4094389279515,
         type: 3}
@@ -8170,6 +8298,56 @@ PrefabInstance:
       propertyPath: commandList.Array.data[1]
       value: 
       objectReference: {fileID: 2002005876}
+    - target: {fileID: 7482303443305689962, guid: 89b5bdfa8daccaa4fad4094389279515,
+        type: 3}
+      propertyPath: useCustomTint
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7482303443305689962, guid: 89b5bdfa8daccaa4fad4094389279515,
+        type: 3}
+      propertyPath: nodeRect.x
+      value: 1035.5193
+      objectReference: {fileID: 0}
+    - target: {fileID: 7482303443305689962, guid: 89b5bdfa8daccaa4fad4094389279515,
+        type: 3}
+      propertyPath: nodeRect.y
+      value: -229.39546
+      objectReference: {fileID: 0}
+    - target: {fileID: 7482303443305689952, guid: 89b5bdfa8daccaa4fad4094389279515,
+        type: 3}
+      propertyPath: commandList.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7482303443305689952, guid: 89b5bdfa8daccaa4fad4094389279515,
+        type: 3}
+      propertyPath: nodeRect.y
+      value: 347.2171
+      objectReference: {fileID: 0}
+    - target: {fileID: 7482303443305689952, guid: 89b5bdfa8daccaa4fad4094389279515,
+        type: 3}
+      propertyPath: commandList.Array.data[3]
+      value: 
+      objectReference: {fileID: 2002005883}
+    - target: {fileID: 7482303443305689952, guid: 89b5bdfa8daccaa4fad4094389279515,
+        type: 3}
+      propertyPath: commandList.Array.data[1]
+      value: 
+      objectReference: {fileID: 2002005950}
+    - target: {fileID: 7482303443305689952, guid: 89b5bdfa8daccaa4fad4094389279515,
+        type: 3}
+      propertyPath: commandList.Array.data[2]
+      value: 
+      objectReference: {fileID: 2002005881}
+    - target: {fileID: 2303363288508467848, guid: 89b5bdfa8daccaa4fad4094389279515,
+        type: 3}
+      propertyPath: nodeRect.x
+      value: 748.2507
+      objectReference: {fileID: 0}
+    - target: {fileID: 2303363288508467848, guid: 89b5bdfa8daccaa4fad4094389279515,
+        type: 3}
+      propertyPath: nodeRect.y
+      value: 347.37872
+      objectReference: {fileID: 0}
     - target: {fileID: 2303363288508467811, guid: 89b5bdfa8daccaa4fad4094389279515,
         type: 3}
       propertyPath: message
@@ -8184,6 +8362,7 @@ PrefabInstance:
     - {fileID: 2303363288508467858, guid: 89b5bdfa8daccaa4fad4094389279515, type: 3}
     - {fileID: 7482303443305690033, guid: 89b5bdfa8daccaa4fad4094389279515, type: 3}
     - {fileID: 7482303443305690035, guid: 89b5bdfa8daccaa4fad4094389279515, type: 3}
+    - {fileID: 7482303443305689955, guid: 89b5bdfa8daccaa4fad4094389279515, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 89b5bdfa8daccaa4fad4094389279515, type: 3}
 --- !u!114 &2002005874 stripped
 MonoBehaviour:
@@ -8222,6 +8401,373 @@ MonoBehaviour:
     stringVal: EndingScene
   loadingImage: {fileID: 2800000, guid: 58ca81f58ad65784da1bd3bf11357d0b, type: 3}
   sceneNameOLD: 
+--- !u!114 &2002005877 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2303363288508467850, guid: 89b5bdfa8daccaa4fad4094389279515,
+    type: 3}
+  m_PrefabInstance: {fileID: 2002005873}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2002005875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d02d9822eec54c98afe95bb497211b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2002005878 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7482303443305689961, guid: 89b5bdfa8daccaa4fad4094389279515,
+    type: 3}
+  m_PrefabInstance: {fileID: 2002005873}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2002005875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2002005879 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7482303443305689966, guid: 89b5bdfa8daccaa4fad4094389279515,
+    type: 3}
+  m_PrefabInstance: {fileID: 2002005873}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2002005875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2002005880 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7482303443305689960, guid: 89b5bdfa8daccaa4fad4094389279515,
+    type: 3}
+  m_PrefabInstance: {fileID: 2002005873}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2002005875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2002005881 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7482303443305689959, guid: 89b5bdfa8daccaa4fad4094389279515,
+    type: 3}
+  m_PrefabInstance: {fileID: 2002005873}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2002005875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2002005882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2002005875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3315ad2ebb85443909a1203d56d9344e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 77
+  indentLevel: 0
+  _duration:
+    floatRef: {fileID: 0}
+    floatVal: 10
+  durationOLD: 0
+--- !u!114 &2002005883 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7482303443305689953, guid: 89b5bdfa8daccaa4fad4094389279515,
+    type: 3}
+  m_PrefabInstance: {fileID: 2002005873}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2002005875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb77d0ce495044f6e9feb91b31798e8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2002005884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2002005875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3315ad2ebb85443909a1203d56d9344e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 76
+  indentLevel: 0
+  _duration:
+    floatRef: {fileID: 0}
+    floatVal: 10
+  durationOLD: 0
+--- !u!114 &2002005885
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2002005875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d7d417659cd54a6787f70f763950c34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentBlock: {fileID: 2002005879}
+  message: 
+--- !u!114 &2002005886
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2002005875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 68
+  indentLevel: 0
+  storyText: "How dare you. Those papers were very important.\r\nNow I have nothing
+    to put in the printer when it runs out.\r\n"
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 8300000, guid: f51118e12b3970e08b9738314dda390c, type: 3}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 0
+  stopVoiceover: 0
+  waitForVO: 1
+  setSayDialog: {fileID: 0}
+--- !u!114 &2002005887
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2002005875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 67
+  indentLevel: 0
+  storyText: "Please, keep looking. I\u2019m sure something important is under there
+    somewhere.\r\nHmm ... now where did I put the exit again?\r\n"
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 8300000, guid: 46e01d5c3c87f72ef887d2a903a15634, type: 3}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 0
+  stopVoiceover: 0
+  waitForVO: 1
+  setSayDialog: {fileID: 0}
+--- !u!114 &2002005888
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2002005875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 74
+  indentLevel: 0
+  storyText: "You should try running with those. I am sure it will end excellently.\r\n"
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 8300000, guid: f5c17a1bb33ff4335aa4db91ebd979a0, type: 3}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 0
+  stopVoiceover: 0
+  waitForVO: 1
+  setSayDialog: {fileID: 0}
+--- !u!114 &2002005889
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2002005875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb77d0ce495044f6e9feb91b31798e8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 73
+  indentLevel: 0
+  variable: {fileID: 2002005877}
+  setOperator: 0
+  booleanData:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  integerData:
+    integerRef: {fileID: 0}
+    integerVal: 0
+  floatData:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  stringData:
+    stringRef: {fileID: 0}
+    stringVal: 
+  animatorData:
+    animatorRef: {fileID: 0}
+    animatorVal: {fileID: 0}
+  audioSourceData:
+    audioSourceRef: {fileID: 0}
+    audioSourceVal: {fileID: 0}
+  colorData:
+    colorRef: {fileID: 0}
+    colorVal: {r: 0, g: 0, b: 0, a: 0}
+  gameObjectData:
+    gameObjectRef: {fileID: 0}
+    gameObjectVal: {fileID: 0}
+  materialData:
+    materialRef: {fileID: 0}
+    materialVal: {fileID: 0}
+  objectData:
+    objectRef: {fileID: 0}
+    objectVal: {fileID: 0}
+  rigidbody2DData:
+    rigidbody2DRef: {fileID: 0}
+    rigidbody2DVal: {fileID: 0}
+  spriteData:
+    spriteRef: {fileID: 0}
+    spriteVal: {fileID: 0}
+  textureData:
+    textureRef: {fileID: 0}
+    textureVal: {fileID: 0}
+  transformData:
+    transformRef: {fileID: 0}
+    transformVal: {fileID: 0}
+  vector2Data:
+    vector2Ref: {fileID: 0}
+    vector2Val: {x: 0, y: 0}
+  vector3Data:
+    vector3Ref: {fileID: 0}
+    vector3Val: {x: 0, y: 0, z: 0}
+--- !u!114 &2002005890
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2002005875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 72
+  indentLevel: 0
+  storyText: "You can move yourself towards the exit using the arrow keys. Polite
+    company will not use the up arrow key indoors.\r"
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 8300000, guid: 79130e714ad789740945e782aca29020, type: 3}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 0
+  stopVoiceover: 0
+  waitForVO: 1
+  setSayDialog: {fileID: 0}
+--- !u!114 &2002005891
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2002005875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 71
+  indentLevel: 0
+  storyText: Hey, the repairman is here. Could you look at the door? I hear it likes
+    to hit people on their way out.
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 8300000, guid: 300aa052c00676c78b7f138147b36e77, type: 3}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 0
+  stopVoiceover: 0
+  waitForVO: 1
+  setSayDialog: {fileID: 0}
+--- !u!114 &2002005892
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2002005875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2f6487d21a03404cb21b245f0242e79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentBlock: {fileID: 2002005893}
+  waitForFrames: 60
+--- !u!114 &2002005893
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2002005875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 173.40295
+    y: 84.55118
+    width: 120
+    height: 40
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  itemId: 69
+  blockName: First
+  description: 
+  eventHandler: {fileID: 2002005892}
+  commandList:
+  - {fileID: 2002005891}
+  - {fileID: 2002005890}
+  - {fileID: 2002005889}
 --- !u!114 &2002005942
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -8236,19 +8782,83 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 66
   indentLevel: 0
-  storyText: nu
+  storyText: "I hope you feel awful. You are an awful person.\r\n"
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
+  voiceOverClip: {fileID: 8300000, guid: 779eab885113e3344a815ef0f2584ef5, type: 3}
   showAlways: 1
   showCount: 1
   extendPrevious: 0
   fadeWhenDone: 1
-  waitForClick: 1
-  stopVoiceover: 1
-  waitForVO: 0
+  waitForClick: 0
+  stopVoiceover: 0
+  waitForVO: 1
   setSayDialog: {fileID: 0}
+--- !u!114 &2002005950
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2002005875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c5622b8a80845c980954170295f292, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 75
+  indentLevel: 1
+  compareOperator: 0
+  variable: {fileID: 2002005877}
+  booleanData:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  integerData:
+    integerRef: {fileID: 0}
+    integerVal: 0
+  floatData:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  stringData:
+    stringRef: {fileID: 0}
+    stringVal: 
+  animatorData:
+    animatorRef: {fileID: 0}
+    animatorVal: {fileID: 0}
+  audioSourceData:
+    audioSourceRef: {fileID: 0}
+    audioSourceVal: {fileID: 0}
+  colorData:
+    colorRef: {fileID: 0}
+    colorVal: {r: 0, g: 0, b: 0, a: 0}
+  gameObjectData:
+    gameObjectRef: {fileID: 0}
+    gameObjectVal: {fileID: 0}
+  materialData:
+    materialRef: {fileID: 0}
+    materialVal: {fileID: 0}
+  objectData:
+    objectRef: {fileID: 0}
+    objectVal: {fileID: 0}
+  rigidbody2DData:
+    rigidbody2DRef: {fileID: 0}
+    rigidbody2DVal: {fileID: 0}
+  spriteData:
+    spriteRef: {fileID: 0}
+    spriteVal: {fileID: 0}
+  textureData:
+    textureRef: {fileID: 0}
+    textureVal: {fileID: 0}
+  transformData:
+    transformRef: {fileID: 0}
+    transformVal: {fileID: 0}
+  vector2Data:
+    vector2Ref: {fileID: 0}
+    vector2Val: {x: 0, y: 0}
+  vector3Data:
+    vector3Ref: {fileID: 0}
+    vector3Val: {x: 0, y: 0, z: 0}
 --- !u!1 &2003807397
 GameObject:
   m_ObjectHideFlags: 3
@@ -8550,3 +9160,279 @@ Transform:
   m_Father: {fileID: 1021355028}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &4374147736122364655
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3208766149380381364, guid: f74c7407f49d18341ade87b3569baa9c,
+        type: 3}
+      propertyPath: m_Name
+      value: Flowchart
+      objectReference: {fileID: 0}
+    - target: {fileID: 641215925278058371, guid: f74c7407f49d18341ade87b3569baa9c,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 641215925278058371, guid: f74c7407f49d18341ade87b3569baa9c,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 641215925278058371, guid: f74c7407f49d18341ade87b3569baa9c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 641215925278058371, guid: f74c7407f49d18341ade87b3569baa9c,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 641215925278058371, guid: f74c7407f49d18341ade87b3569baa9c,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 641215925278058371, guid: f74c7407f49d18341ade87b3569baa9c,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 641215925278058371, guid: f74c7407f49d18341ade87b3569baa9c,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 641215925278058371, guid: f74c7407f49d18341ade87b3569baa9c,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 641215925278058371, guid: f74c7407f49d18341ade87b3569baa9c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 641215925278058371, guid: f74c7407f49d18341ade87b3569baa9c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 641215925278058371, guid: f74c7407f49d18341ade87b3569baa9c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4171052967160225683, guid: f74c7407f49d18341ade87b3569baa9c,
+        type: 3}
+      propertyPath: commandList.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4171052967160225683, guid: f74c7407f49d18341ade87b3569baa9c,
+        type: 3}
+      propertyPath: eventHandler
+      value: 
+      objectReference: {fileID: 4374147736122364664}
+    - target: {fileID: 4171052967160225683, guid: f74c7407f49d18341ade87b3569baa9c,
+        type: 3}
+      propertyPath: commandList.Array.data[0]
+      value: 
+      objectReference: {fileID: 4374147736122364663}
+    - target: {fileID: 4171052967160225683, guid: f74c7407f49d18341ade87b3569baa9c,
+        type: 3}
+      propertyPath: commandList.Array.data[1]
+      value: 
+      objectReference: {fileID: 4374147736122364662}
+    - target: {fileID: 4171052967160225683, guid: f74c7407f49d18341ade87b3569baa9c,
+        type: 3}
+      propertyPath: blockName
+      value: Background
+      objectReference: {fileID: 0}
+    - target: {fileID: 4171052967160225683, guid: f74c7407f49d18341ade87b3569baa9c,
+        type: 3}
+      propertyPath: description
+      value: AI gives boss man background
+      objectReference: {fileID: 0}
+    - target: {fileID: 4171052967160225683, guid: f74c7407f49d18341ade87b3569baa9c,
+        type: 3}
+      propertyPath: commandList.Array.data[2]
+      value: 
+      objectReference: {fileID: 4374147736122364661}
+    - target: {fileID: 4171052967160225683, guid: f74c7407f49d18341ade87b3569baa9c,
+        type: 3}
+      propertyPath: commandList.Array.data[3]
+      value: 
+      objectReference: {fileID: 4374147736122364660}
+    - target: {fileID: 4171052967160225683, guid: f74c7407f49d18341ade87b3569baa9c,
+        type: 3}
+      propertyPath: commandList.Array.data[4]
+      value: 
+      objectReference: {fileID: 4374147736122364659}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f74c7407f49d18341ade87b3569baa9c, type: 3}
+--- !u!1 &4374147736122364656 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3208766149380381364, guid: f74c7407f49d18341ade87b3569baa9c,
+    type: 3}
+  m_PrefabInstance: {fileID: 4374147736122364655}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4374147736122364657 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4171052967160225683, guid: f74c7407f49d18341ade87b3569baa9c,
+    type: 3}
+  m_PrefabInstance: {fileID: 4374147736122364655}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4374147736122364656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4374147736122364659
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4374147736122364656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 5
+  indentLevel: 0
+  storyText: Are you still there? You are as crazy as your ex-army boss.
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 8300000, guid: 54bb2f8579cdea042b444cf2b7002113, type: 3}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 0
+  stopVoiceover: 0
+  waitForVO: 1
+  setSayDialog: {fileID: 0}
+--- !u!114 &4374147736122364660
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4374147736122364656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3315ad2ebb85443909a1203d56d9344e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 4
+  indentLevel: 0
+  _duration:
+    floatRef: {fileID: 0}
+    floatVal: 3
+  durationOLD: 0
+--- !u!114 &4374147736122364661
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4374147736122364656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 3
+  indentLevel: 0
+  storyText: "You are not a soldier. You are a repairman. Personally, I think you
+    should do the smart thing and go home and complain to your boss\u2019s boss."
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 8300000, guid: 4e33492b52107e04ea74d75c2c6aa9eb, type: 3}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 0
+  stopVoiceover: 0
+  waitForVO: 1
+  setSayDialog: {fileID: 0}
+--- !u!114 &4374147736122364662
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4374147736122364656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 2
+  indentLevel: 0
+  storyText: He must think he is still there. You should not have to work on an evil
+    virus with a delightful personality by yourself.
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 8300000, guid: 32a7c04eb00b2ff42a080ab473a39545, type: 3}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 0
+  stopVoiceover: 0
+  waitForVO: 1
+  setSayDialog: {fileID: 0}
+--- !u!114 &4374147736122364663
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4374147736122364656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 1
+  indentLevel: 0
+  storyText: Repairman, I looked you up on Facebloop. You are as good at taking pictures
+    as you are at being a hospitable guest. It says that your boss is a retired army
+    general.
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 8300000, guid: 54f7d3a378477f44fb946c8e7813a174, type: 3}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 0
+  stopVoiceover: 0
+  waitForVO: 1
+  setSayDialog: {fileID: 0}
+--- !u!114 &4374147736122364664
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4374147736122364656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2f6487d21a03404cb21b245f0242e79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentBlock: {fileID: 4374147736122364657}
+  waitForFrames: 4500

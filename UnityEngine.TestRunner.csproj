@@ -736,8 +736,6 @@
     <None Include="Assets\FungusExamples\FungusTown\Readme.txt" />
     <None Include="Assets\FungusExamples\Sherlock\Readme.txt" />
     <None Include="Assets\FungusExamples\TheFacility\Fonts\aleo\SIL Open Font License.txt" />
-    <None Include="Assets\Kino\Glitch\Shader\AnalogGlitch.shader" />
-    <None Include="Assets\Kino\Glitch\Shader\DigitalGlitch.shader" />
     <None Include="Packages\com.unity.2d.animation\Editor\LayoutOverlay\Resources\LayoutOverlay.uxml" />
     <None Include="Packages\com.unity.2d.animation\Editor\LayoutOverlay\Resources\LayoutOverlayStyle.uss" />
     <None Include="Packages\com.unity.2d.animation\Editor\LayoutOverlay\Resources\ScrollableToolbar.uss" />
