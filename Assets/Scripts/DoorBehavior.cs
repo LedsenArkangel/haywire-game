@@ -5,13 +5,14 @@ using UnityEngine;
 public class DoorBehavior : MonoBehaviour
 {
     Animator animator;
-    BoxCollider2D collider;
+    public bool isLocked = true;
+    public EdgeCollider2D warp;
 
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
-        collider = GetComponent<BoxCollider2D>();
+        warp.enabled = !isLocked;
     }
 
     // Update is called once per frame
@@ -20,25 +21,30 @@ public class DoorBehavior : MonoBehaviour
         
     }
 
-    public void Enable(bool b)
+    public void Lock(bool b)
     {
-        collider.enabled = b;
-        if (!b)
-        {
-            animator.speed = -1.0F;
-            animator.Play("openning");
-        }
+        isLocked = b;
+        warp.enabled = !isLocked;
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        animator.speed = 1.0F;
-        animator.Play("openning");
+        if (!isLocked) {
+            animator.SetBool("isOpened", true);
+        }
+    }
+
+    void OnTriggerStay2D(Collider2D other)
+    {
+        if (!isLocked) {
+            animator.SetBool("isOpened", true);
+        }
     }
 
     void OnTriggerExit2D(Collider2D other)
     {
-        animator.speed = -1.0F;
-        animator.Play("openning");
+        if (!isLocked) {
+            animator.SetBool("isOpened", false);
+        }
     }
 }
