@@ -1133,7 +1133,6 @@ GameObject:
   - component: {fileID: 1534311520}
   - component: {fileID: 1534311518}
   - component: {fileID: 1534311517}
-  - component: {fileID: 1534311525}
   - component: {fileID: 1534311524}
   - component: {fileID: 1534311519}
   m_Layer: 0
@@ -1294,10 +1293,8 @@ MonoBehaviour:
     y: -340
     width: 1114
     height: 859
-  selectedBlocks:
-  - {fileID: 1534311516}
-  selectedCommands:
-  - {fileID: 1534311522}
+  selectedBlocks: []
+  selectedCommands: []
   variables: []
   description: 
   stepPause: 0
@@ -1369,7 +1366,7 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 0}
   commandList:
-  - {fileID: 1534311525}
+  - {fileID: 0}
   - {fileID: 1534311508}
   - {fileID: 1534311524}
   - {fileID: 1534311514}
@@ -1403,7 +1400,7 @@ MonoBehaviour:
   - {fileID: 1534311520}
 --- !u!114 &1534311517
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -1467,7 +1464,7 @@ MonoBehaviour:
   toPositionOLD: {x: 0, y: 0, z: 0}
 --- !u!114 &1534311519
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -1553,7 +1550,7 @@ MonoBehaviour:
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
-  voiceOverClip: {fileID: 8300000, guid: 5b348dc9b69b8814db983b90b980aaea, type: 3}
+  voiceOverClip: {fileID: 8300000, guid: d407c24a16ffe3040923506d31eea612, type: 3}
   showAlways: 1
   showCount: 1
   extendPrevious: 0
@@ -1591,9 +1588,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 24
   indentLevel: 0
-  targetObject: {fileID: 1488866103}
-  methodName: Show
-  delay: 0
+  _animator:
+    animatorRef: {fileID: 0}
+    animatorVal: {fileID: 0}
+  _parameterName:
+    stringRef: {fileID: 0}
+    stringVal: 
+  value:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  animatorOLD: {fileID: 0}
+  parameterNameOLD: 
 --- !u!1 &1613478101
 GameObject:
   m_ObjectHideFlags: 0
