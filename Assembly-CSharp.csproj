@@ -617,6 +617,7 @@
      <Compile Include="Assets\Scripts\TRexBehavior.cs" />
      <Compile Include="Assets\Scripts\TRexRoomBehavior.cs" />
      <Compile Include="Assets\Scripts\WarpBehavior.cs" />
+     <Compile Include="Assets\Zero Rare\Retro Sound Effects\Demo\Demo.cs" />
      <None Include="Assets\Fungus\Thirdparty\ThirdPartyNotices.txt" />
      <None Include="Assets\Fungus\Thirdparty\TextMeshPro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
      <None Include="Assets\Fungus\Thirdparty\TextMeshPro\Resources\LineBreaking Leading Characters.txt" />

@@ -90,7 +90,6 @@ public class PlayerMovement : MonoBehaviour
     }
 
     void OnTriggerStay2D(Collider2D other) {
-        Debug.Log(other.tag);
         if (other.tag == "Ladder" && Input.GetAxis("Vertical") != 0) {
             animator.SetBool("isClimbing", true);
             // Snap to ladder
