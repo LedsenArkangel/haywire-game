@@ -7400,7 +7400,7 @@ MonoBehaviour:
   - {fileID: 604224800}
   - {fileID: 777448567}
   selector: {fileID: 2093630926}
-  offset: {x: -3.5, y: -3.5, z: 0}
+  offset: {x: -4, y: -4, z: 0}
 --- !u!61 &1355954720
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11019,7 +11019,7 @@ MonoBehaviour:
   itemId: 84
   indentLevel: 0
   storyText: "Please, keep looking. I\u2019m sure something important is under there
-    somewhere.\r\nHmm ... now where did I put the exit again?\r\n"
+    somewhere.\r\n"
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
