@@ -7,10 +7,13 @@ public class TRexBehavior : MonoBehaviour
     public static bool batTaken = false;
     public float speed = 5.0F;
     public GameObject drop;
+    public AudioClip sfxDrop;
+
+    AudioSource audio;
     // Start is called before the first frame update
     void Start()
     {
-        
+        audio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -35,6 +38,7 @@ public class TRexBehavior : MonoBehaviour
             var obj = Instantiate(drop, transform.position, rndRotation);
             obj.name = "Baseball Bat";
             batTaken = true;
+            audio.PlayOneShot(sfxDrop);
             Destroy(gameObject);
         }
     }

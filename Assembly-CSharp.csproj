@@ -601,6 +601,7 @@
      <Compile Include="Assets\Scripts\AiFloatMovement.cs" />
      <Compile Include="Assets\Scripts\Boundaries.cs" />
      <Compile Include="Assets\Scripts\CharacterController2D.cs" />
+     <Compile Include="Assets\Scripts\DecoyBehavior.cs" />
      <Compile Include="Assets\Scripts\DestroyableBehavior.cs" />
      <Compile Include="Assets\Scripts\DestroyableCheck.cs" />
      <Compile Include="Assets\Scripts\DoorBehavior.cs" />

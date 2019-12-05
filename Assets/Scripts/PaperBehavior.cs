@@ -5,11 +5,13 @@ using UnityEngine;
 public class PaperBehavior : MonoBehaviour
 {
     public List<GameObject> pieces;
+    public AudioClip sfxCut;
     static bool isCut = false;
+    AudioSource audio;
     // Start is called before the first frame update
     void Start()
     {
-        
+        audio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -27,6 +29,7 @@ public class PaperBehavior : MonoBehaviour
                 isCut = true;
                 Fungus.Flowchart.BroadcastFungusMessage("PaperCut");
             }
+            audio.PlayOneShot(sfxCut);
             Destroy(gameObject);
         }
     }

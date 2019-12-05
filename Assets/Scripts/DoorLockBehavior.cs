@@ -5,11 +5,15 @@ using UnityEngine;
 public class DoorLockBehavior : MonoBehaviour
 {
     Animator animator;
+    AudioSource audio;
     public DoorBehavior door;
+    public AudioClip sfxUnlock;
+    public AudioClip sfxLock;
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
+        audio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -24,7 +28,9 @@ public class DoorLockBehavior : MonoBehaviour
                 if (Inventory.GetSelectedItemName() == "ID Card") {
                     door.Lock(false);
                     animator.SetTrigger("unlocking");
+                    audio.PlayOneShot(sfxUnlock);
                 } else {
+                    audio.PlayOneShot(sfxLock);
                     Fungus.Flowchart.BroadcastFungusMessage("DeniedAccess");
                 }
             }

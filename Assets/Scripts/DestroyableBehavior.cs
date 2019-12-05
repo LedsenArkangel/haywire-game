@@ -7,12 +7,15 @@ public class DestroyableBehavior : MonoBehaviour
     public Sprite broken;
     public string requiredItemName = "";
     public bool isDestroyed = false;
+    public AudioClip sfxDestroyed;
 
     SpriteRenderer spriteRenderer;
+    AudioSource audio;
     // Start is called before the first frame update
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        audio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -26,6 +29,7 @@ public class DestroyableBehavior : MonoBehaviour
             if (requiredItemName == "" || Inventory.GetSelectedItemName() == requiredItemName) {
                 isDestroyed = true;
                 spriteRenderer.sprite = broken;
+                audio.PlayOneShot(sfxDestroyed, 0.1F);
             }
         }
     }

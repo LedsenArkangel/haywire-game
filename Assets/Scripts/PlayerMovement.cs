@@ -10,11 +10,13 @@ public class PlayerMovement : MonoBehaviour
     Animator animator;
     Rigidbody2D rigidbody;
     BoxCollider2D collider;
+    AudioSource audio;
     bool hasJumped = false;
 
     public float speed = 7;
     public float jump = 100;
     public float minJump = 10;
+    public AudioClip sfxInteract;
     public Fungus.Flowchart flowchart;
     // Start is called before the first frame update
     void Start()
@@ -23,6 +25,7 @@ public class PlayerMovement : MonoBehaviour
         animator = GetComponent<Animator>();
         rigidbody = GetComponent<Rigidbody2D>();
         collider = GetComponent<BoxCollider2D>();
+        audio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -41,6 +44,8 @@ public class PlayerMovement : MonoBehaviour
                 // interact
                 StartCoroutine(PlayInteracting());
             }
+        } else {
+            animator.SetFloat("horizontal", 0);
         }
     }
 
@@ -89,6 +94,7 @@ public class PlayerMovement : MonoBehaviour
     IEnumerator PlayInteracting()
     {
         animator.Play("interacting");
+        audio.PlayOneShot(sfxInteract);
         
         yield return new WaitForSeconds(1);
     }
