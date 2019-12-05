@@ -5,6 +5,7 @@ using UnityEngine;
 public class PaperBehavior : MonoBehaviour
 {
     public List<GameObject> pieces;
+    static bool isCut = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +22,10 @@ public class PaperBehavior : MonoBehaviour
         if (other.tag == "Player" && Input.GetAxis("Jump") != 0 && Inventory.GetSelectedItemName() == "Scissors") {
             foreach(GameObject piece in pieces) {
                 Instantiate(piece, transform.position, Quaternion.identity);
+            }
+            if (!isCut) {
+                isCut = true;
+                Fungus.Flowchart.BroadcastFungusMessage("PaperCut");
             }
             Destroy(gameObject);
         }

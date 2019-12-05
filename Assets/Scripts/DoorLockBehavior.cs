@@ -20,9 +20,13 @@ public class DoorLockBehavior : MonoBehaviour
 
     void OnTriggerStay2D(Collider2D other) {
         if (other.tag == "Player" && Input.GetAxis("Jump") != 0) {
-            if (door.isLocked && Inventory.GetSelectedItemName() == "ID Card") {
-                door.Lock(false);
-                animator.SetTrigger("unlocking");
+            if (door.isLocked) {
+                if (Inventory.GetSelectedItemName() == "ID Card") {
+                    door.Lock(false);
+                    animator.SetTrigger("unlocking");
+                } else {
+                    Fungus.Flowchart.BroadcastFungusMessage("DeniedAccess");
+                }
             }
         }
     }

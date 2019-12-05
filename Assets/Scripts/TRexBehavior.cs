@@ -29,6 +29,7 @@ public class TRexBehavior : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other) {
         if (other.tag == "Player") {
+            Fungus.Flowchart.BroadcastFungusMessage("TRexDisappeared");
             var rndRotation = new Quaternion(0.0F, 0.0F, 0.0F, 0.0F);
             rndRotation.eulerAngles = new Vector3(0.0F, 0.0F, Random.Range(-180.0F, 180.0F));
             var obj = Instantiate(drop, transform.position, rndRotation);

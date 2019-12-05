@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     Animator animator;
     Rigidbody2D rigidbody;
     BoxCollider2D collider;
+    bool hasJumped = false;
 
     public float speed = 7;
     public float jump = 100;
@@ -76,6 +77,10 @@ public class PlayerMovement : MonoBehaviour
                 if (Input.GetAxis("Vertical") > 0 && verticalSpeed == 0) {
                     var jumpForce = Input.GetAxis("Vertical") * jump * minJump;
                     rigidbody.AddForce(new Vector2(0, Mathf.Min(jump, jumpForce)), ForceMode2D.Impulse);
+                    if (!hasJumped) {
+                        hasJumped = true;
+                        Fungus.Flowchart.BroadcastFungusMessage("FirstJump");
+                    }
                 }
             }
         }

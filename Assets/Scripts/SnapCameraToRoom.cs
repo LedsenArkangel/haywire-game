@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class SnapCameraToRoom : MonoBehaviour
 {
+    public string messageOnFirstEnter = "";
+    bool hasEntered = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +23,10 @@ public class SnapCameraToRoom : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             Camera.main.transform.position = new Vector3(transform.position.x, transform.position.y, -100);
+            if (!hasEntered && messageOnFirstEnter != "") {
+                hasEntered = true;
+                Fungus.Flowchart.BroadcastFungusMessage(messageOnFirstEnter);
+            }
         }
     }
 }

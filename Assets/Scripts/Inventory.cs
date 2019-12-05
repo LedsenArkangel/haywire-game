@@ -74,8 +74,10 @@ public class Inventory : MonoBehaviour
 
         // Resize the sprite
         if (item.name == "ID Card") {
+            Fungus.Flowchart.BroadcastFungusMessage("CardPicked");
             imgRectTransform.sizeDelta = new Vector2(itemImage.sprite.rect.width * 10, itemImage.sprite.rect.height * 10);
         } else if (item.name == "Scissors") {
+            Fungus.Flowchart.BroadcastFungusMessage("ScissorsPicked");
             imgRectTransform.Rotate(0.0F, 0.0F, 99.29301F);
             imgRectTransform.sizeDelta = new Vector2(itemImage.sprite.rect.width * 10, itemImage.sprite.rect.height * 10);
         } else if (item.name.Contains("Baseball Bat")) {
